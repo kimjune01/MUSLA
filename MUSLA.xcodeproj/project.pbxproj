@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BD232ABF1D4131C10053F856 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ABE1D4131C10053F856 /* main.cpp */; };
+		BD232AC71D4136460053F856 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232AC51D4136460053F856 /* Student.cpp */; };
+		BD232ACA1D4136EE0053F856 /* University.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232AC81D4136EE0053F856 /* University.cpp */; };
+		BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ACB1D41379C0053F856 /* HashTable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		BD232ABB1D4131C00053F856 /* MUSLA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MUSLA; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD232ABE1D4131C10053F856 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BD232AC51D4136460053F856 /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+		BD232AC61D4136460053F856 /* Student.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Student.hpp; sourceTree = "<group>"; };
+		BD232AC81D4136EE0053F856 /* University.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = University.cpp; sourceTree = "<group>"; };
+		BD232AC91D4136EE0053F856 /* University.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = University.hpp; sourceTree = "<group>"; };
+		BD232ACB1D41379C0053F856 /* HashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
+		BD232ACC1D41379C0053F856 /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				BD232ABE1D4131C10053F856 /* main.cpp */,
+				BD232AC51D4136460053F856 /* Student.cpp */,
+				BD232AC61D4136460053F856 /* Student.hpp */,
+				BD232AC81D4136EE0053F856 /* University.cpp */,
+				BD232AC91D4136EE0053F856 /* University.hpp */,
+				BD232ACB1D41379C0053F856 /* HashTable.cpp */,
+				BD232ACC1D41379C0053F856 /* HashTable.hpp */,
 			);
 			path = MUSLA;
 			sourceTree = "<group>";
@@ -119,6 +134,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD232ABF1D4131C10053F856 /* main.cpp in Sources */,
+				BD232AC71D4136460053F856 /* Student.cpp in Sources */,
+				BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */,
+				BD232ACA1D4136EE0053F856 /* University.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
