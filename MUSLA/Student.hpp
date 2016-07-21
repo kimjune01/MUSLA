@@ -28,6 +28,9 @@
 using namespace std;
 
 class Student {
+
+    
+public:
     unsigned int studentNumber;
     string firstName;
     string lastName;
@@ -36,7 +39,7 @@ class Student {
     string highSchool;
     vector<string> programsEnrolled;
     
-public:
+    Student();
     Student(unsigned int number, string first, string last) : studentNumber(number), firstName(first), lastName(last){};
     unsigned int index() {return studentNumber;}
     

@@ -8,7 +8,11 @@
 
 #include <iostream>
 
+#include "TestDriver.h"
+
+
 int main(int argc, const char * argv[]) {
-    
+    TestDriver *driver = new TestDriver();
+    driver->testAllTheThings();
     return 0;
 }

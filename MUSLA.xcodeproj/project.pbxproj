@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E9675A1D414F49008280FE /* TestDriver.cpp */; };
 		BD232ABF1D4131C10053F856 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ABE1D4131C10053F856 /* main.cpp */; };
 		BD232AC71D4136460053F856 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232AC51D4136460053F856 /* Student.cpp */; };
 		BD232ACA1D4136EE0053F856 /* University.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232AC81D4136EE0053F856 /* University.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A7E9675A1D414F49008280FE /* TestDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestDriver.cpp; sourceTree = "<group>"; };
+		A7E9675B1D414F49008280FE /* TestDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDriver.h; sourceTree = "<group>"; };
 		BD232ABB1D4131C00053F856 /* MUSLA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MUSLA; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD232ABE1D4131C10053F856 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BD232AC51D4136460053F856 /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				BD232AC91D4136EE0053F856 /* University.hpp */,
 				BD232ACB1D41379C0053F856 /* HashTable.cpp */,
 				BD232ACC1D41379C0053F856 /* HashTable.hpp */,
+				A7E9675A1D414F49008280FE /* TestDriver.cpp */,
+				A7E9675B1D414F49008280FE /* TestDriver.h */,
 			);
 			path = MUSLA;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			files = (
 				BD232ABF1D4131C10053F856 /* main.cpp in Sources */,
 				BD232AC71D4136460053F856 /* Student.cpp in Sources */,
+				A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */,
 				BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */,
 				BD232ACA1D4136EE0053F856 /* University.cpp in Sources */,
 			);
@@ -180,7 +186,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -218,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -228,6 +234,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -235,6 +242,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -257,6 +265,7 @@
 				BD232AC41D4131C10053F856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
