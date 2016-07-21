@@ -14,17 +14,6 @@
 #include <string>
 #include <vector>
 
-/*
- student number,
- student last name,
- student first name,
- student mailing address,
- student email address,
- name of high school,
- programs currently enrolled (e.g.: Math Major and/or Physics Minor and/or etc...),
- faculty (e.g.: Science, Applied Science, etc...).
- 
- */
 using namespace std;
 
 class Student {

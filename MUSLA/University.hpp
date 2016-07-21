@@ -11,12 +11,7 @@
 
 #include <stdio.h>
 #include <string>
-/*
- university name,
- university mailing address,
- university email address of their Registrar's Office,
- university phone number of their Registrar's Office.
- */
+
 using namespace std;
 
 class University {
@@ -24,7 +19,7 @@ class University {
     string mailingAddress;
     string emailAddress;
     unsigned int phoneNumber;
-    
+    //TODO: has students in a BST.
     
 public:
     University(string name, string mailing, string email) :

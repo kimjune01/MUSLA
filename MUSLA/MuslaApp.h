@@ -15,7 +15,8 @@
 #include <string.h>
 
 class MuslaApp {
-    //
+    //TODO: has a hash table of universities indexed by name
+    //TODO: has a hash table of students indexed by student ID
     
 public:
     //Once entered the name of a university, find the selected university in O(1).
