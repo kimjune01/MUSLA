@@ -40,7 +40,8 @@ public:
     vector<string> programsEnrolled;
     
     Student();
-    Student(unsigned int number, string first, string last) : studentNumber(number), firstName(first), lastName(last){};
+    Student(unsigned int number, string first, string last) :
+        studentNumber(number), firstName(first), lastName(last){};
     unsigned int index() {return studentNumber;}
     
 };

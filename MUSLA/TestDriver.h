@@ -17,5 +17,6 @@ class TestDriver {
 public:
     void testAllTheThings();
     void testStudentThings();
+    void testUniversityThings();
 };
 #endif /* defined(__MUSLA__TestDriver__) */
