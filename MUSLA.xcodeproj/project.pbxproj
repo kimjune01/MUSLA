@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D411FC81D442ADE0091BB48 /* JimmyTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D411FC61D442ADE0091BB48 /* JimmyTester.cpp */; };
 		A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E9675A1D414F49008280FE /* TestDriver.cpp */; };
 		A7E9675F1D415B0C008280FE /* MuslaApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E9675D1D415B0C008280FE /* MuslaApp.cpp */; };
 		BD232ABF1D4131C10053F856 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ABE1D4131C10053F856 /* main.cpp */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D411FC61D442ADE0091BB48 /* JimmyTester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JimmyTester.cpp; sourceTree = "<group>"; };
+		8D411FC71D442ADE0091BB48 /* JimmyTester.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JimmyTester.hpp; sourceTree = "<group>"; };
 		A7E9675A1D414F49008280FE /* TestDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestDriver.cpp; sourceTree = "<group>"; };
 		A7E9675B1D414F49008280FE /* TestDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDriver.h; sourceTree = "<group>"; };
 		A7E9675D1D415B0C008280FE /* MuslaApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MuslaApp.cpp; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				BD232ABE1D4131C10053F856 /* main.cpp */,
+				8D411FC61D442ADE0091BB48 /* JimmyTester.cpp */,
+				8D411FC71D442ADE0091BB48 /* JimmyTester.hpp */,
 				A7E9675D1D415B0C008280FE /* MuslaApp.cpp */,
 				A7E9675E1D415B0C008280FE /* MuslaApp.h */,
 				BD232AC51D4136460053F856 /* Student.cpp */,
@@ -145,6 +150,7 @@
 			files = (
 				BD232ABF1D4131C10053F856 /* main.cpp in Sources */,
 				BD232AC71D4136460053F856 /* Student.cpp in Sources */,
+				8D411FC81D442ADE0091BB48 /* JimmyTester.cpp in Sources */,
 				A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */,
 				BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */,
 				A7E9675F1D415B0C008280FE /* MuslaApp.cpp in Sources */,
