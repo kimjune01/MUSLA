@@ -18,3 +18,7 @@ University::University(){
 void University::display() {
     cout << universityName << ": " << mailingAddress << ", " << emailAddress <<endl;
 }
+
+void University::enroll(Student students[]){
+    //TODO:
+}

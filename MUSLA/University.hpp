@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include "Student.hpp"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ public:
     universityName(name), mailingAddress(mailing), emailAddress(email){};
     University();
     void display();
+    void enroll(Student students[]);
 };
 
 #endif /* University_hpp */

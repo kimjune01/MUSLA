@@ -23,10 +23,10 @@ HashTable::HashTable(){
     }
 
 }
-//TODO: deal with table collisions. 
+//TODO: deal with table collisions.
 void HashTable::Insert(Student newStudent, University newUniversity){
-    int index = Hash(newStudent)
-    if(hashTable[])
+//    int index = Hash(newStudent)
+//    if(hashTable[])
 }
 
 int HashTable::Hash(string key){

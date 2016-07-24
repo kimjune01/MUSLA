@@ -14,6 +14,8 @@
 #include <string>
 
 using namespace std;
+
+//TODO: ADD Templating make it independant. 
 class HashTable {
     
 private:
@@ -32,7 +34,6 @@ public:
     HashTable();
     int Hash(string key);
     Node * hashTable[tableSize];
-    
     void Insert(Student newStudent, University newUniversity);
     //TODO: implement
     

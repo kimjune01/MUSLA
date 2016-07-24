@@ -19,8 +19,9 @@ class MuslaApp {
     //TODO: has a hash table of students indexed by student ID
     
 public:
+    void enlist(Student students[]);
     //Once entered the name of a university, find the selected university in O(1).
-    University *findUniversityNamed(string universityName);
+    University *universityNamed(string universityName);
     //Display all students at the university by ascending alphabetical order of last name. O(n)
     void displayStudentsByLastNameIn(University *university);
     //Display all students at the university by ascending numerical order of student number. O(n)
@@ -34,7 +35,9 @@ public:
     void display(University *university);
     void display(Student *student);
     
-    
+    //
+//    void demo();
+    Student sampleStudent(int seed);
 };
 
 #endif /* defined(__MUSLA__MuslaApp__) */
