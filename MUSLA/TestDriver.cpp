@@ -22,7 +22,16 @@ University mockUniversity(int number);
 void TestDriver::testHashTable(){
     
     HashTable  testHashTable = HashTable();
-    
+    for(int i=0; i<100;i++){
+        assert(testHashTable.hashTable[i]->nextID ==NULL);
+        assert(testHashTable.hashTable[i]->nextLastName ==NULL);
+        assert(testHashTable.hashTable[i]->student1.lastName=="");
+        assert(testHashTable.hashTable[i]->student1.firstName=="");
+        assert(testHashTable.hashTable[i]->university1.universityName =="");
+        assert(testHashTable.hashTable[i]->university1.mailingAddress =="");
+         
+    }
+    // expected result is this to output nothing.
     
     cout<<testHashTable.Hash("Paul");
     

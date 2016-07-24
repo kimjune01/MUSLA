@@ -28,11 +28,12 @@ private:
     };
     
     
-    
 public:
     HashTable();
     int Hash(string key);
+    Node * hashTable[tableSize];
     
+    void Insert(Student newStudent, University newUniversity);
     //TODO: implement
     
     //write the default constructor
