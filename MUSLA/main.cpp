@@ -12,6 +12,7 @@
 
 
 int main(int argc, const char * argv[]) {
+    std::cout<<"hello";
     TestDriver *driver = new TestDriver();
     driver->testAllTheThings();
     return 0;

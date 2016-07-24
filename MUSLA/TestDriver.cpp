@@ -12,9 +12,66 @@
 #include <assert.h>
 #include <ctime>
 #include "MuslaApp.h"
+#include "HashTable.hpp"
+#include <iostream>
 
-void TestDriver::testAllTheThings(){
+using namespace std;
+void TestDriver::testHashTable(){
     
+    HashTable  testHashTable = HashTable();
+    
+    
+    cout<<testHashTable.Hash("Paul");
+    
+    
+    /*
+    HashTable  testHashTable = *new HashTable;
+    
+    testHashTable->data[0]= "UBC";
+    testHashTable->data[1]= "SFU";
+    testHashTable->data[2]= "BCIT";
+    testHashTable->data[3]= "Kapilano";
+    
+          string firstName = "Jimmy";string  lastName = "Zhong"; break;
+          string firstName = "June"; string lastName = "Kim"; break;
+          string firstName = "Jess"; string lastName = "Phong"; break;
+          string  firstName = "Eric"; string lastName = "M"; break;
+          string firstName = "Anne";  string lastName = "Love"; break;
+          string firstName = "Bby";  string lastName = "Chn"; break;
+            
+         
+    //insert the students.
+    testHashTable.data[0]->insert(Student(1, firstName, lastName));
+    testHashTable->data[0]->insert(Student(2, firstName, lastName));
+    testHashTable->data[0]->insert(Student(3, firstName, lastName));
+    testHashTable->data[0]->insert(Student(4, firstName, lastName));
+    
+    
+    testHashTable.data[0]->insert(Student(1, firstName, lastName));
+    testHashTable->data[1]->insert(Student(2, firstName, lastName));
+    testHashTable->data[2]->insert(Student(3, firstName, lastName));
+    testHashTable->data[3]->insert(Student(4, firstName, lastName));
+    
+    
+    //
+    cout<< " the students of university X sorted by last name";
+    testHashTable[0]->printAllLastName();
+    
+    testHashTable[0]->printAllID();
+    
+    testHashTable[1]->printAllLastName();
+    
+    testHashTable[1]->printAllID();
+
+    */
+    
+    
+    
+    }
+
+Student mockStudent(int number);
+void TestDriver::testAllTheThings(){
+    testHashTable();
     testStudentThings();
     testUniversityThings();
     //testMuslaThings()
@@ -32,17 +89,19 @@ void TestDriver::testStudentThings(){
     assert(someOtherStudent.studentNumber == 111);
     assert(someOtherStudent.firstName == "Bob");
     assert(someOtherStudent.lastName == "Uncle");
-    
+
     
 }
 
 void TestDriver::testUniversityThings(){
-    
+//TODO:
 }
 
 void testMuslaThings(){
     //TODO:
+    
     MuslaApp musla = MuslaApp();
+    
     
 }
 

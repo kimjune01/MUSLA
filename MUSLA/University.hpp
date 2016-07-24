@@ -23,7 +23,7 @@ class University {
     
 public:
     University(string name, string mailing, string email) :
-        universityName(name), mailingAddress(mailing), emailAddress(email){};
+    universityName(name), mailingAddress(mailing), emailAddress(email){};
     
 };
 

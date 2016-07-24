@@ -10,13 +10,23 @@
 #define HashTable_hpp
 
 #include <stdio.h>
+#include <string>
 
-template <class Hashable>
+using namespace std;
 class HashTable {
-    //
+    
+private:
+    int tableSize;
     
 public:
+    HashTable();
+    int Hash(string key);
+    
     //TODO: implement
+    
+    //write the default constructor
+    //write an insert and a delete.
+    //write a delete
 };
 
 

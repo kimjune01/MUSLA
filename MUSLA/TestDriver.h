@@ -18,5 +18,6 @@ public:
     void testAllTheThings();
     void testStudentThings();
     void testUniversityThings();
+    void testHashTable();
 };
 #endif /* defined(__MUSLA__TestDriver__) */
