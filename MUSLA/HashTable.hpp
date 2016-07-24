@@ -16,6 +16,7 @@
 using namespace std;
 
 //TODO: ADD Templating make it independant. 
+
 class HashTable {
     
 private:
