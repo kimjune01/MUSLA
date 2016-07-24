@@ -12,7 +12,7 @@
 using namespace std;
 
 HashTable::HashTable(){
-    tableSize = 100;
+
 }
 
 int HashTable::Hash(string key){

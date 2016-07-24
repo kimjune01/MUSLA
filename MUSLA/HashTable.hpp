@@ -16,7 +16,14 @@ using namespace std;
 class HashTable {
     
 private:
-    int tableSize;
+    static const int tableSize = 100;
+    
+    struct Node{
+        
+        string University;
+        Node *nextID;
+        Node *nextLastName;
+    };
     
 public:
     HashTable();

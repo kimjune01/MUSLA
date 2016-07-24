@@ -15,16 +15,18 @@
 using namespace std;
 
 class University {
+    
+    //TODO: has students in a BST.
+    
+public:
     string universityName;
     string mailingAddress;
     string emailAddress;
     unsigned int phoneNumber;
-    //TODO: has students in a BST.
-    
-public:
     University(string name, string mailing, string email) :
     universityName(name), mailingAddress(mailing), emailAddress(email){};
-    
+    University();
+    void display();
 };
 
 #endif /* University_hpp */

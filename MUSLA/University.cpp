@@ -7,3 +7,14 @@
 //
 
 #include "University.hpp"
+#include <iostream>
+
+using namespace std;
+
+University::University(){
+    
+}
+
+void University::display() {
+    cout << universityName << ": " << mailingAddress << ", " << emailAddress <<endl;
+}

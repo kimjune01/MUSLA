@@ -16,6 +16,9 @@
 #include <iostream>
 
 using namespace std;
+
+University mockUniversity(int number);
+
 void TestDriver::testHashTable(){
     
     HashTable  testHashTable = HashTable();
@@ -94,7 +97,20 @@ void TestDriver::testStudentThings(){
 }
 
 void TestDriver::testUniversityThings(){
-//TODO:
+
+    University university1 = University();
+    assert(university1.universityName=="");
+    assert(university1.mailingAddress=="");
+    assert(university1.emailAddress=="");
+    
+    vector<University> universities;
+    for (int i = 1; i < 8; i++) {
+        universities.push_back(mockUniversity(i));
+    }
+    for (int i = 1; i<8; i++) {
+        universities[i-1].display();
+    }
+    
 }
 
 void testMuslaThings(){
@@ -120,6 +136,7 @@ Student mockStudent(int number){
     }
     return Student(number, firstName, lastName);
 }
+
 
 University mockUniversity(int number){
     string name;
