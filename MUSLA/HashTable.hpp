@@ -8,7 +8,8 @@
 
 #ifndef HashTable_hpp
 #define HashTable_hpp
-
+#include "Student.hpp"
+#include "University.hpp"
 #include <stdio.h>
 #include <string>
 
@@ -20,10 +21,13 @@ private:
     
     struct Node{
         
-        string University;
+        University university1;
+        Student student1;
         Node *nextID;
         Node *nextLastName;
     };
+    
+    
     
 public:
     HashTable();
