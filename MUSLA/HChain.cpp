@@ -32,7 +32,7 @@ void HChain::SearchNode( WordPair* searchWord){
     
 }
 
-bool HChain::insertNode( WordPair * newWord, Node<WordPair> *currentHIndex){
+bool HChain::insertNode( WordPair * newWord){
     
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
     if(head ==NULL){

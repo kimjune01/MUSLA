@@ -11,6 +11,7 @@
 #include <string>
 #include <iostream>
 #include <assert.h>
+#include "HChain.hpp"
 using namespace std;
 
 HashTable::HashTable(){
@@ -35,15 +36,7 @@ void HashTable::Insert(WordPair EK){
     }
     else{
         assert(HTable[index]->data.english != "empty"&&HTable[index]->data.klingon != "empty" );
-
-        
-//        Node*Ptr = HTable[index];
-//        Node * n = new Node;
-//        n->english = english;
-//        n->klingon = klingon;
-//        n->next = NULL;
-        
-      
+        currentChain->insertNode(&EK);
     }
 }
 
