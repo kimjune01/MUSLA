@@ -10,11 +10,27 @@ using namespace std;
 #include <iostream>
 #include "HChain.hpp"
 #include "WordPair.h"
+#include "Node.h"
 HChain::HChain(){
     head = NULL;
     next = NULL;
 }
 
+void HChain::SearchNode( WordPair* searchWord){
+    //TODO: make this work with hashtable look up.
+    
+    Node<WordPair> *current = head;
+    
+    while(current!=NULL){
+        if(current->data == *searchWord){
+            cout<<"found";
+        }
+        
+        current = current->next;
+    }
+    
+    
+}
 
 bool HChain::insertNode( WordPair * newWord, Node<WordPair> *currentHIndex){
     
@@ -36,7 +52,7 @@ bool HChain::insertNode( WordPair * newWord, Node<WordPair> *currentHIndex){
 void HChain::printAll(){
     Node<WordPair> *current = head;
     while(current!=NULL){
-        cout<< "english:"<<current->data.english<<"klingon:"<<current->data.klingon;
+        cout<< "english:"<<current->data.english<<"klingon:"<<current->data.klingon<<endl;
         current = current->next;
     }
     

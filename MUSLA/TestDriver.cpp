@@ -41,9 +41,6 @@ void TestDriver::testHashTable(){
     testHashTable.Hash(insert2);
     testHashTable.Hash(insert3);
     testHashTable.Hash(insert4);
- 
-    
-    
     /*
     HashTable  testHashTable = *new HashTable;
     
@@ -51,21 +48,15 @@ void TestDriver::testHashTable(){
      testHashTable->insert("Jimmy")= testHashTable->search("Jimmy");
      testHashTable->insert("June")= testHashTable->search("June");
      testHashTable->insert("July")= testHashTable->search("July");
- 
-     
      testHashTable->printall();
-   
     */
-    
-    
-    
     }
 
  void TestDriver::testHashChain(){
      // is working 
-    WordPair* testword1 =new WordPair( "english3","klingon3");
+    WordPair* testword1 =new WordPair( "english1","klingon1");
      WordPair* testword2 =new WordPair( "english2","klingon2");
-     WordPair* testword3 =new WordPair( "english1","klingon1");
+     WordPair* testword3 =new WordPair( "english3","klingon3");
     Node<WordPair> * currentNode = new Node<WordPair>(*testword1);
     
     HChain * testChain = new HChain();
@@ -74,12 +65,15 @@ void TestDriver::testHashTable(){
      testChain->insertNode(testword2,currentNode);
      testChain->insertNode(testword3,currentNode);
      testChain->printAll();
-     
+     WordPair* testSearchWord2 =new WordPair( "english2","klingon2");
+     // note return true is they are the same address?
+     testChain->SearchNode(testword2);
+     testChain->SearchNode( testSearchWord2);
     
 }
  void TestDriver::testAllTheThings(){
        testHashTable();
-     testHashChain();
+       testHashChain();
     //TODO:
     //mock universities and students
 }

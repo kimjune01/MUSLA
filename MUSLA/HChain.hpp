@@ -27,7 +27,7 @@ private:
 public:
     HChain();
     
-    WordPair *SearchNode();
+    void SearchNode(WordPair * searchWord);
     bool insertNode( WordPair * newWord,Node<WordPair>* currentHIndex);
     void printAll();
 };
