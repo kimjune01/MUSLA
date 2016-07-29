@@ -8,8 +8,8 @@
 
 #ifndef HashTable_hpp
 #define HashTable_hpp
-#include "Student.hpp"
-#include "University.hpp"
+
+
 #include <stdio.h>
 #include <string>
 
@@ -23,19 +23,19 @@ private:
     static const int tableSize = 100;
     
     struct Node{
+        string english;
+        string klingon;
+        Node *next;
         
-        University university1;
-        Student student1;
-        Node *nextID;
-        Node *nextLastName;
-    };
+            };
     
+    Node* HTable[100];
     
 public:
     HashTable();
     int Hash(string key);
     Node * hashTable[tableSize];
-    void Insert(Student newStudent, University newUniversity);
+    void Insert(string english, string klingon);
     //TODO: implement
     
     //write the default constructor

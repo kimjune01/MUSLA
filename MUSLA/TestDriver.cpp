@@ -7,29 +7,27 @@
 //
 
 #include "TestDriver.h"
-#include "Student.hpp"
-#include "University.hpp"
+
 #include <assert.h>
 #include <ctime>
-#include "MuslaApp.h"
 #include "HashTable.hpp"
 #include <iostream>
 
 using namespace std;
 
-University mockUniversity(int number);
+
 
 void TestDriver::testHashTable(){
     
     HashTable  testHashTable = HashTable();
     for(int i=0; i<100;i++){
-        assert(testHashTable.hashTable[i]->nextID ==NULL);
-        assert(testHashTable.hashTable[i]->nextLastName ==NULL);
-        assert(testHashTable.hashTable[i]->student1.lastName=="");
-        assert(testHashTable.hashTable[i]->student1.firstName=="");
-        assert(testHashTable.hashTable[i]->university1.universityName =="");
-        assert(testHashTable.hashTable[i]->university1.mailingAddress =="");
-         
+//        assert(testHashTable.hashTable[i]->nextID ==NULL);
+//        assert(testHashTable.hashTable[i]->nextLastName ==NULL);
+//        assert(testHashTable.hashTable[i]->student1.lastName=="");
+//        assert(testHashTable.hashTable[i]->student1.firstName=="");
+//        assert(testHashTable.hashTable[i]->university1.universityName =="");
+//        assert(testHashTable.hashTable[i]->university1.mailingAddress =="");
+        
     }
     // expected result is this to output nothing.
     
@@ -81,85 +79,10 @@ void TestDriver::testHashTable(){
     
     }
 
-Student mockStudent(int number);
-void TestDriver::testAllTheThings(){
-    testHashTable();
-    testStudentThings();
-    testUniversityThings();
-    //testMuslaThings()
+ void TestDriver::testAllTheThings(){
+       testHashTable();
+         //testMuslaThings()
     //TODO:
     //mock universities and students
 }
 
-
-void TestDriver::testStudentThings(){
-    
-    Student newStudent = Student();
-    assert(newStudent.firstName == "");
-    
-    Student someOtherStudent = Student(111, "Bob", "Uncle");
-    assert(someOtherStudent.studentNumber == 111);
-    assert(someOtherStudent.firstName == "Bob");
-    assert(someOtherStudent.lastName == "Uncle");
-
-    
-}
-
-void TestDriver::testUniversityThings(){
-
-    University university1 = University();
-    assert(university1.universityName=="");
-    assert(university1.mailingAddress=="");
-    assert(university1.emailAddress=="");
-    
-    vector<University> universities;
-    for (int i = 1; i < 8; i++) {
-        universities.push_back(mockUniversity(i));
-    }
-    for (int i = 1; i<8; i++) {
-        universities[i-1].display();
-    }
-    
-}
-
-void testMuslaThings(){
-    //TODO:
-    
-    MuslaApp musla = MuslaApp();
-    
-    
-}
-
-Student mockStudent(int number){
-    string firstName;
-    string lastName;
-    switch (number) {
-        case 1: firstName = "Jimmy"; lastName = "Zhong"; break;
-        case 2: firstName = "June"; lastName = "Kim"; break;
-        case 3: firstName = "Jess"; lastName = "Phong"; break;
-        case 4: firstName = "Eric"; lastName = "M"; break;
-        case 5: firstName = "Anne"; lastName = "Love"; break;
-        case 6: firstName = "Bby"; lastName = "Chn"; break;
-            
-        default: assert(true); break;
-    }
-    return Student(number, firstName, lastName);
-}
-
-
-University mockUniversity(int number){
-    string name;
-    string mailing;
-    string email;
-    switch (number) {
-        case 1: name = "SFU"; mailing = "8888"; email = "@sfu.ca"; break;
-        case 2: name = "UBC"; mailing = "1234"; email = "@ubc.ca"; break;
-        case 3: name = "BCIT"; mailing = "45454"; email = "@bcit.ca"; break;
-        case 4: name = "EmilyCarr"; mailing = "696969"; email = "@emilycarr.ca"; break;
-        case 5: name = "Capilano"; mailing = "5555"; email = "@capilano.ca"; break;
-        case 6: name = "Kwantlen"; mailing = "6666"; email = "@kwantlen.ca"; break;
-        case 7: name = "UVIC"; mailing = "7777"; email = "@uvic.ca"; break;
-        default: assert(true); break;
-    }
-    return University(name, mailing, email);
-}

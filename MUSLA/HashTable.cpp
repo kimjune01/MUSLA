@@ -13,18 +13,17 @@ using namespace std;
 
 HashTable::HashTable(){
     int i;
-    for( i =0; i<tableSize;i++){
-        hashTable[i] = new Node;
-        hashTable[i]->university1 = University();
-        hashTable[i]->student1 = Student();
-        hashTable[i]->nextID = NULL;
-        hashTable[i]->nextLastName = NULL;
+    for(i =0; i<tableSize;i++){
+         HTable[i] = new Node;
+         HTable[i]->english = "empty";
+         HTable[i]->klingon  = "empty";
+         HTable[i]->next = NULL;
  
     }
 
 }
 //TODO: deal with table collisions.
-void HashTable::Insert(Student newStudent, University newUniversity){
+void HashTable::Insert(string english, string klingon){
 //    int index = Hash(newStudent)
 //    if(hashTable[])
 }
