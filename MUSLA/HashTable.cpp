@@ -9,6 +9,7 @@
 #include "HashTable.hpp"
 #include <string>
 #include <iostream>
+#include <assert.h>
 using namespace std;
 
 HashTable::HashTable(){
@@ -22,10 +23,25 @@ HashTable::HashTable(){
     }
 
 }
-//TODO: deal with table collisions.
+//TODO: deal with table collisions.currently using chaining
+// deal with collisions.
 void HashTable::Insert(string english, string klingon){
-//    int index = Hash(newStudent)
-//    if(hashTable[])
+    int index = Hash(english);
+    //TODO the english and klingon public and private. 
+    if(HTable[index]->english == "empty"){
+        HTable[index]->english = english;
+        HTable[index]->klingon = klingon;
+    }
+    else{
+        assert(HTable[index]->english != "empty"&&HTable[index]->klingon != "empty" );
+        Node*Ptr = HTable[index];
+        Node * n = new Node;
+        n->english = english;
+        n->klingon = klingon;
+        n->next = NULL;
+        
+      
+    }
 }
 
 int HashTable::Hash(string key){
@@ -36,13 +52,13 @@ int HashTable::Hash(string key){
     // TODO: check if int i = 0 works on linux
     for(int i = 0; i<key.length();i++){
         hash = hash +(int)key[i];
-        cout<< "hash = "<<hash<< endl;
+        
         
     }
-    
+    cout<< "hash = "<<hash<< endl;
     
     index =hash% tableSize;
-    
+    cout<< "index:"<<index<<endl;
     
     
     return 0;

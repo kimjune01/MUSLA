@@ -8,8 +8,9 @@
 
 #include <iostream>
 
-
+#include "TestDriver.h"
 int main(int argc, const char * argv[]) {
-   
+    TestDriver *newTest = new  TestDriver ;
+    newTest->testHashTable();
     return 0;
 }

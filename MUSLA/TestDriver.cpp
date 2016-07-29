@@ -19,60 +19,39 @@ using namespace std;
 
 void TestDriver::testHashTable(){
     
+    //default constructor test
     HashTable  testHashTable = HashTable();
     for(int i=0; i<100;i++){
-//        assert(testHashTable.hashTable[i]->nextID ==NULL);
-//        assert(testHashTable.hashTable[i]->nextLastName ==NULL);
-//        assert(testHashTable.hashTable[i]->student1.lastName=="");
-//        assert(testHashTable.hashTable[i]->student1.firstName=="");
-//        assert(testHashTable.hashTable[i]->university1.universityName =="");
-//        assert(testHashTable.hashTable[i]->university1.mailingAddress =="");
-        
+        assert(testHashTable.HTable[i]->english =="empty");
+        assert(testHashTable.HTable[i]->klingon =="empty");
+        assert(testHashTable.HTable[i]->next == NULL);
     }
     // expected result is this to output nothing.
     
-    cout<<testHashTable.Hash("Paul");
+    // hash function test. returns a number from a string
+    testHashTable.Hash("Paul");
+    testHashTable.Hash("dibby");
+     testHashTable.Hash("dabby");
+
+   testHashTable.Hash("dubby");
+
+    testHashTable.Hash("zzzsas");
+
+  testHashTable.Hash("asaas");
+
     
     
     /*
     HashTable  testHashTable = *new HashTable;
     
-    testHashTable->data[0]= "UBC";
-    testHashTable->data[1]= "SFU";
-    testHashTable->data[2]= "BCIT";
-    testHashTable->data[3]= "Kapilano";
-    
-          string firstName = "Jimmy";string  lastName = "Zhong"; break;
-          string firstName = "June"; string lastName = "Kim"; break;
-          string firstName = "Jess"; string lastName = "Phong"; break;
-          string  firstName = "Eric"; string lastName = "M"; break;
-          string firstName = "Anne";  string lastName = "Love"; break;
-          string firstName = "Bby";  string lastName = "Chn"; break;
-            
-         
-    //insert the students.
-    testHashTable.data[0]->insert(Student(1, firstName, lastName));
-    testHashTable->data[0]->insert(Student(2, firstName, lastName));
-    testHashTable->data[0]->insert(Student(3, firstName, lastName));
-    testHashTable->data[0]->insert(Student(4, firstName, lastName));
-    
-    
-    testHashTable.data[0]->insert(Student(1, firstName, lastName));
-    testHashTable->data[1]->insert(Student(2, firstName, lastName));
-    testHashTable->data[2]->insert(Student(3, firstName, lastName));
-    testHashTable->data[3]->insert(Student(4, firstName, lastName));
-    
-    
-    //
-    cout<< " the students of university X sorted by last name";
-    testHashTable[0]->printAllLastName();
-    
-    testHashTable[0]->printAllID();
-    
-    testHashTable[1]->printAllLastName();
-    
-    testHashTable[1]->printAllID();
-
+    testHashTable->insert("Paul")= testHashTable->search("Paul");
+     testHashTable->insert("Jimmy")= testHashTable->search("Jimmy");
+     testHashTable->insert("June")= testHashTable->search("June");
+     testHashTable->insert("July")= testHashTable->search("July");
+ 
+     
+     testHashTable->printall();
+   
     */
     
     

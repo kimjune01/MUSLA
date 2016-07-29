@@ -20,7 +20,7 @@ using namespace std;
 class HashTable {
     
 private:
-    static const int tableSize = 100;
+    static const int tableSize = 200;
     
     struct Node{
         string english;
@@ -29,12 +29,12 @@ private:
         
             };
     
-    Node* HTable[100];
+   
     
 public:
     HashTable();
     int Hash(string key);
-    Node * hashTable[tableSize];
+     Node* HTable[100];
     void Insert(string english, string klingon);
     //TODO: implement
     
