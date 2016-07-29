@@ -70,15 +70,15 @@
 			isa = PBXGroup;
 			children = (
 				BD232ABE1D4131C10053F856 /* main.cpp */,
-				BD232ACB1D41379C0053F856 /* HashTable.cpp */,
 				8D707EAB1D4AF74D0024F7EC /* HashChain.cpp */,
 				8D707EAC1D4AF74D0024F7EC /* HashChain.hpp */,
+				BD232ACB1D41379C0053F856 /* HashTable.cpp */,
 				BD232ACC1D41379C0053F856 /* HashTable.hpp */,
 				8D707EAA1D4AE7100024F7EC /* BST.h */,
 				A7E9675A1D414F49008280FE /* TestDriver.cpp */,
+				A7E9675B1D414F49008280FE /* TestDriver.h */,
 				8D707EA81D4AE6F00024F7EC /* Node.h */,
 				8D707EA91D4AE6F90024F7EC /* WordPair.h */,
-				A7E9675B1D414F49008280FE /* TestDriver.h */,
 			);
 			path = MUSLA;
 			sourceTree = "<group>";

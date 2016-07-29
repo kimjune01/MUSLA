@@ -31,8 +31,9 @@ public:
     HashTable();
      
     int Hash(WordPair key);
-    Node<WordPair>* HTable[100];
+    Node<WordPair>* HTable[tableSize];
     void Insert(WordPair EK);
+    
     //TODO: implement
     
     //write the default constructor

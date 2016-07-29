@@ -17,6 +17,6 @@ class TestDriver {
 public:
     void testAllTheThings();
     void testHashTable();
-    //void testHashChain();
+    void testHashChain();
 };
 #endif /* defined(__MUSLA__TestDriver__) */

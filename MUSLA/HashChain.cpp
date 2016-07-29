@@ -5,7 +5,7 @@
 //  Created by jimmy zhong on 2016-07-28.
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
-/*
+
 #include "HashChain.hpp"
 #include "Node.h"
 #include "HashTable.hpp"
@@ -18,7 +18,7 @@ HashChain::HashChain(){
 
 
 bool HashChain::insertNode( WordPair * newWord, Node<WordPair> *currentHIndex){
-    /*
+ 
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
     if(head ==NULL){
         head = newNode;
@@ -29,7 +29,7 @@ bool HashChain::insertNode( WordPair * newWord, Node<WordPair> *currentHIndex){
         }
         Ptr->next = newNode;
     }
-     */
- //   return true;
+    
+   return true;
      
-//}
+ }

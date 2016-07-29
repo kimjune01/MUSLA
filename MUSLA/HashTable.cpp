@@ -18,7 +18,8 @@ HashTable::HashTable(){
     WordPair * newWordPair = new WordPair("empty","empty");
     Node<WordPair> * newNode = new Node<WordPair>(*newWordPair);
     newNode->next = NULL;
-    for(i =0; i<tableSize;i++){
+    
+    for(i =0; i<tableSize-1;i++){
          HTable[i] = newNode;
     }
 
