@@ -20,9 +20,10 @@ using namespace std;
 template <class T>
 class Node{
     private:
-        Node<T>*next;
     
     public:
+       Node<T>*next;
+
         Node(T insert) : data(insert),next(NULL){};
        // The data in the node
        // Pointer to next node
@@ -30,7 +31,7 @@ class Node{
         T  data;
         bool nodeSetNext (Node<T>* theData);
     
-    bool nodegetNext(){
+    bool nodeGetNext(){
         return next;
     }
 };

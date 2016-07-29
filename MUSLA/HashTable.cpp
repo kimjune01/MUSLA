@@ -15,14 +15,11 @@ using namespace std;
 
 HashTable::HashTable(){
     int i;
-    WordPair * newWordPair;
-    
+    WordPair * newWordPair = new WordPair("empty","empty");
+    Node<WordPair> * newNode = new Node<WordPair>(*newWordPair);
+    newNode->next = NULL;
     for(i =0; i<tableSize;i++){
-         HTable[i] = new Node<WordPair>(*newWordPair);
-         HTable[i]->data.english = "empty";
-         HTable[i]->data.klingon  = "empty";
-         HTable[i]->nodeSetNext(NULL);
- 
+         HTable[i] = newNode;
     }
 
 }
@@ -53,8 +50,8 @@ int HashTable::Hash(WordPair key){
     
     index = key.english.length();
     // TODO: check if int i = 0 works on linux
-    for(int i = 0; i<key.length();i++){
-        hash = hash +(int)key[i];
+    for(int i = 0; i<key.english.length();i++){
+        hash = hash +(int)key.english[i];
         
         
     }

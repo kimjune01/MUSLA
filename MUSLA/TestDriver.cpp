@@ -12,7 +12,7 @@
 #include <ctime>
 #include "HashTable.hpp"
 #include <iostream>
-
+#include "WordPair.h"
 using namespace std;
 
 
@@ -22,23 +22,23 @@ void TestDriver::testHashTable(){
     //default constructor test
     HashTable  testHashTable = HashTable();
     for(int i=0; i<100;i++){
-        assert(testHashTable.HTable[i]->WordPair.english =="empty");
-        assert(testHashTable.HTable[i]->WordPair.klingon =="empty");
-        assert(testHashTable.HTable[i]->WordPair.next == NULL);
+        assert(testHashTable.HTable[i]->data.english =="empty");
+        assert(testHashTable.HTable[i]->data.klingon =="empty");
+        assert(testHashTable.HTable[i]->next == NULL);
     }
     // expected result is this to output nothing.
     
     // hash function test. returns a number from a string
-    testHashTable.Hash("Paul");
-    testHashTable.Hash("dibby");
-     testHashTable.Hash("dabby");
-
-   testHashTable.Hash("dubby");
-
-    testHashTable.Hash("zzzsas");
-
-  testHashTable.Hash("asaas");
-
+    WordPair  insert1 = WordPair("ffff","klinon1");
+    WordPair  insert2 = WordPair("gggg","klinon1");
+    WordPair  insert3 = WordPair("english1","klinon1");
+    WordPair  insert4 = WordPair("english1","klinon1");
+    
+    testHashTable.Hash(insert1);
+    testHashTable.Hash(insert2);
+    testHashTable.Hash(insert3);
+    testHashTable.Hash(insert4);
+ 
     
     
     /*
