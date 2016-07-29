@@ -13,7 +13,7 @@
 #include "HashTable.hpp"
 #include <iostream>
 #include "WordPair.h"
-#include "HashChain.hpp"
+#include "HashChain.h"
 
 using namespace std;
 
@@ -62,17 +62,24 @@ void TestDriver::testHashTable(){
     }
 
  void TestDriver::testHashChain(){
+     // is working 
     WordPair* testword1 =new WordPair( "english3","klingon3");
+     WordPair* testword2 =new WordPair( "english2","klingon2");
+     WordPair* testword3 =new WordPair( "english1","klingon1");
     Node<WordPair> * currentNode = new Node<WordPair>(*testword1);
     
-    HashChain * testChain = new HashChain();
+    HChain * testChain = new HChain();
     
     testChain->insertNode(testword1,currentNode);
+     testChain->insertNode(testword2,currentNode);
+     testChain->insertNode(testword3,currentNode);
+     testChain->printAll();
+     
     
 }
  void TestDriver::testAllTheThings(){
        testHashTable();
-         //testMuslaThings()
+     testHashChain();
     //TODO:
     //mock universities and students
 }

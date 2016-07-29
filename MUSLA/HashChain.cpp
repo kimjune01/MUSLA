@@ -6,7 +6,7 @@
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
 
-#include "HashChain.hpp"
+#include "HashChain.h"
 #include "Node.h"
 #include "HashTable.hpp"
 
@@ -33,3 +33,4 @@ bool HashChain::insertNode( WordPair * newWord, Node<WordPair> *currentHIndex){
    return true;
      
  }
+

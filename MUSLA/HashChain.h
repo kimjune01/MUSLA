@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include "Node.h"
 #include "WordPair.h"
-#include "HashTable.hpp"
+
+#pragma once
 class HashChain{
 private:
     Node<WordPair>* head;
@@ -21,7 +22,7 @@ private:
     
 public:
     HashChain();
-    HashChain *currentChain;
+    
     WordPair *SearchNode();
     bool insertNode( WordPair * newWord,Node<WordPair>* currentHIndex);
 };

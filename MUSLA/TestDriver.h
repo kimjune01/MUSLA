@@ -8,7 +8,7 @@
 
 #ifndef __MUSLA__TestDriver__
 #define __MUSLA__TestDriver__
-
+#pragma once
 #include <stdio.h>
 
 class TestDriver {

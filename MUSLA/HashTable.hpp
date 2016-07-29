@@ -14,7 +14,7 @@
 #include <string>
 #include "WordPair.h"
 #include "Node.h"
-#include "HashChain.hpp"
+#include "HChain.hpp"
 using namespace std;
 
 //TODO: ADD Templating make it independant. 
@@ -29,10 +29,11 @@ private:
     
 public:
     HashTable();
-     
+    
     int Hash(WordPair key);
     Node<WordPair>* HTable[tableSize];
     void Insert(WordPair EK);
+    HChain * currentChain;
     
     //TODO: implement
     

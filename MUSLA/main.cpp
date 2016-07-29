@@ -11,6 +11,6 @@
 #include "TestDriver.h"
 int main(int argc, const char * argv[]) {
     TestDriver *newTest = new  TestDriver ;
-    newTest->testHashTable();
+    newTest->testAllTheThings();
     return 0;
 }
