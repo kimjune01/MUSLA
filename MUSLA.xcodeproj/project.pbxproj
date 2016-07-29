@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D707EAD1D4AF74D0024F7EC /* HashChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D707EAB1D4AF74D0024F7EC /* HashChain.cpp */; };
 		A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E9675A1D414F49008280FE /* TestDriver.cpp */; };
 		BD232ABF1D4131C10053F856 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ABE1D4131C10053F856 /* main.cpp */; };
 		BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ACB1D41379C0053F856 /* HashTable.cpp */; };
@@ -28,6 +29,8 @@
 		8D707EA81D4AE6F00024F7EC /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		8D707EA91D4AE6F90024F7EC /* WordPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordPair.h; sourceTree = "<group>"; };
 		8D707EAA1D4AE7100024F7EC /* BST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BST.h; sourceTree = "<group>"; };
+		8D707EAB1D4AF74D0024F7EC /* HashChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashChain.cpp; sourceTree = "<group>"; };
+		8D707EAC1D4AF74D0024F7EC /* HashChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashChain.hpp; sourceTree = "<group>"; };
 		A7E9675A1D414F49008280FE /* TestDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestDriver.cpp; sourceTree = "<group>"; };
 		A7E9675B1D414F49008280FE /* TestDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDriver.h; sourceTree = "<group>"; };
 		BD232ABB1D4131C00053F856 /* MUSLA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MUSLA; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +71,8 @@
 			children = (
 				BD232ABE1D4131C10053F856 /* main.cpp */,
 				BD232ACB1D41379C0053F856 /* HashTable.cpp */,
+				8D707EAB1D4AF74D0024F7EC /* HashChain.cpp */,
+				8D707EAC1D4AF74D0024F7EC /* HashChain.hpp */,
 				BD232ACC1D41379C0053F856 /* HashTable.hpp */,
 				8D707EAA1D4AE7100024F7EC /* BST.h */,
 				A7E9675A1D414F49008280FE /* TestDriver.cpp */,
@@ -139,6 +144,7 @@
 			files = (
 				BD232ABF1D4131C10053F856 /* main.cpp in Sources */,
 				A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */,
+				8D707EAD1D4AF74D0024F7EC /* HashChain.cpp in Sources */,
 				BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,7 @@
  /* Node_hpp */
 #include <string>
 #include <stdio.h>
- 
+ // turn this into a BSTNode for inorder printing. 
 using namespace std;
 
 template <class T>
@@ -29,6 +29,7 @@ class Node{
        // Pointer to next node
        // Constructors and destructor
         T  data;
+        
         bool nodeSetNext (Node<T>* theData);
     
     bool nodeGetNext(){

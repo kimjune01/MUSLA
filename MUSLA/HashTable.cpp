@@ -34,6 +34,8 @@ void HashTable::Insert(WordPair EK){
     }
     else{
         assert(HTable[index]->data.english != "empty"&&HTable[index]->data.klingon != "empty" );
+
+        
 //        Node*Ptr = HTable[index];
 //        Node * n = new Node;
 //        n->english = english;
