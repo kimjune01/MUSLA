@@ -22,9 +22,9 @@ void TestDriver::testHashTable(){
     //default constructor test
     HashTable  testHashTable = HashTable();
     for(int i=0; i<100;i++){
-        assert(testHashTable.HTable[i]->english =="empty");
-        assert(testHashTable.HTable[i]->klingon =="empty");
-        assert(testHashTable.HTable[i]->next == NULL);
+        assert(testHashTable.HTable[i]->WordPair.english =="empty");
+        assert(testHashTable.HTable[i]->WordPair.klingon =="empty");
+        assert(testHashTable.HTable[i]->WordPair.next == NULL);
     }
     // expected result is this to output nothing.
     

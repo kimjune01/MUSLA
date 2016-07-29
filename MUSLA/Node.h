@@ -20,43 +20,28 @@ using namespace std;
 template <class T>
 class Node{
     private:
-        Node<T>* left;
-        Node<T>*right;
-        T  data;
+        Node<T>*next;
+    
     public:
-        Node(T insert) : data(insert),left(NULL),right(NULL){};
+        Node(T insert) : data(insert),next(NULL){};
        // The data in the node
        // Pointer to next node
        // Constructors and destructor
+        T  data;
+        bool nodeSetNext (Node<T>* theData);
     
-        bool nodeRight (Node<T>* theData);
-    
-        bool nodeLeft (Node<T> *theData);
-        T getData(){
-            return data;
-        }
-        Node<T> *getLeft(){
-            return left;
-        }
-        Node<T> *getRight(){
-            return right;
-        }
+    bool nodegetNext(){
+        return next;
+    }
 };
 
  
 
 template<class T>
 
-bool Node<T>::nodeLeft(Node<T>* thedata){
-    left = thedata;
+bool Node<T>::nodeSetNext(Node<T>* thedata){
+    next = thedata;
     return true;
 }
-
-template<class T>
-bool Node<T>::nodeRight(Node<T>* thedata){
-    right = thedata;
-    return true;
-}
-
-#endif
+ #endif
  

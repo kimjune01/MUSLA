@@ -12,7 +12,8 @@
 
 #include <stdio.h>
 #include <string>
-
+#include "WordPair.h"
+#include "Node.h"
 using namespace std;
 
 //TODO: ADD Templating make it independant. 
@@ -22,20 +23,14 @@ class HashTable {
 private:
     static const int tableSize = 200;
     
-    struct Node{
-        string english;
-        string klingon;
-        Node *next;
-        
-            };
     
    
     
 public:
     HashTable();
-    int Hash(string key);
-     Node* HTable[100];
-    void Insert(string english, string klingon);
+    int Hash(WordPair key);
+    Node<WordPair>* HTable[100];
+    void Insert(WordPair EK);
     //TODO: implement
     
     //write the default constructor
