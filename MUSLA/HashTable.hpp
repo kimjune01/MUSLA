@@ -30,11 +30,11 @@ private:
 public:
     HashTable();
     
-    int Hash(WordPair key);
+    int Hash(string english);
     Node<WordPair>* HTable[tableSize];
     void Insert(WordPair EK);
     
-    WordPair* FindKlingon(string english);
+    WordPair* lookUpKlingon(string english);
     //TODO: implement
     
     //write the default constructor

@@ -29,31 +29,36 @@ void TestDriver::testHashTable(){
         assert(testHashTable.HTable[i]->next == NULL);
     }
     // expected result is this to output nothing.
-    
+    //TODO: make this efficient for large values of N . 
     // hash function test. returns a number from a string
     WordPair  insert1 = WordPair("f","klinon1");
     WordPair  insert2 = WordPair("g","klinon1");
     WordPair  insert3 = WordPair("english1","klinon1");
     WordPair  insert4 = WordPair("english2","klinon2");
-    WordPair  insert5 = WordPair("english4","klinon4");
-    WordPair  insert6 = WordPair("english5","klinon5");
+    WordPair  insert5 = WordPair("english3","klinon4");
+    WordPair  insert6 = WordPair("english4","klinon5");
     testHashTable.Insert(insert1);
     testHashTable.Insert(insert1);
     testHashTable.Insert(insert1);
-
     testHashTable.Insert(insert2);
     testHashTable.Insert(insert3);
     testHashTable.Insert(insert4);
     testHashTable.Insert(insert5);
     testHashTable.Insert(insert6);
     
-    /*
-     assert(testHashTable->search("ffff")==insert1);
-     assert(testHashTable->search("gggg")=="klingon1");
-     assert(testHashTable->search("english5")=="klingon5");
-          */
+    assert(*testHashTable.lookUpKlingon("english1") == insert3);
+    assert(*testHashTable.lookUpKlingon("english2") == insert4);
+
+    assert(*testHashTable.lookUpKlingon("english3") == insert5);
+
+    assert(*testHashTable.lookUpKlingon("english4") == insert6);
     
-    }
+
+    
+    //search
+    
+    
+}
 
  void TestDriver::testHashChain(){
      
@@ -78,6 +83,7 @@ void TestDriver::testHashTable(){
      testChain->insertNode(testword5,currentNode);
      testChain->insertNode(testword8,currentNode);
      testChain->insertNode(testword9,currentNode);
+     
      //testChain->printAll(currentNode);
      
      //search
@@ -89,8 +95,8 @@ void TestDriver::testHashTable(){
       testChain->SearchNode("eng4",currentNode);
 }
  void TestDriver::testAllTheThings(){
-      testHashChain();
-     //testHashTable();
+      //testHashChain();
+      testHashTable();
      
     //TODO:
     //mock universities and students
