@@ -11,19 +11,16 @@ using namespace std;
 #include "HChain.hpp"
 #include "WordPair.h"
 #include "Node.h"
-HChain::HChain(){
-     head = NULL;
-     next = NULL;
-}
 
-void HChain::SearchNode( WordPair* searchWord){
+void HChain::SearchNode( string english,Node<WordPair>* currentHIndex){
     //TODO: make this work with hashtable look up.
     
-    Node<WordPair> *current = head;
+    Node<WordPair> *current = currentHIndex;
     
     while(current!=NULL){
-        if(current->data == *searchWord){
-            cout<<"found";
+        if(current->data.english == english){
+            cout<<"found"<<"english:"<<current->data.english<<"klingon:"<<current->data.klingon;
+            return;
         }
         
         current = current->next;
@@ -33,27 +30,23 @@ void HChain::SearchNode( WordPair* searchWord){
 }
 // TODO: get the Node as an agument pointer and then add things to that Node via using
 // HChain class.
-bool HChain::insertNode( WordPair * newWord){
+bool HChain::insertNode( WordPair * newWord,Node<WordPair>*currentHIndex){
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
-    if(head ==NULL){
-    Node<WordPair>* newNode = new Node<WordPair>(*newWord);
-        head = newNode;
-        newNode->next =NULL;
-    }
-    if(head!=NULL){
-        Node<WordPair> *Ptr = head;
-        while(Ptr->next!=NULL){
+    newNode->next = NULL;
+    
+    Node<WordPair>* Ptr = currentHIndex;
+    while(Ptr->next!=NULL){
             Ptr = Ptr->next;
         }
         Ptr->next = newNode;
-    }
-   
+    
+    
     return true;
     
 }
 
-void HChain::printAll(){
-    Node<WordPair> *current = head;
+void HChain::printAll(Node<WordPair> *currentHIndex){
+    Node<WordPair> *current = currentHIndex;
     while(current!=NULL){
         cout<< "english:"<<current->data.english<<"klingon:"<<current->data.klingon<<endl;
         current = current->next;

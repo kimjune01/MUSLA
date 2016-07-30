@@ -20,16 +20,13 @@
 
 class HChain{
 private:
-    Node<WordPair>  *head;
-    Node<WordPair>  *next;
-    
     
 public:
-    HChain();
     
-    void SearchNode(WordPair * searchWord);
-    bool insertNode( WordPair * newWord);
-    void printAll();
+    
+    void SearchNode(string english,Node<WordPair>*currentHIndex);
+    bool insertNode( WordPair * newWord,Node<WordPair>*currentHIndex);
+    void printAll(Node<WordPair>*currentHIndex);
 };
 
 

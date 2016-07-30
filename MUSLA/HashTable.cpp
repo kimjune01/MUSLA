@@ -16,15 +16,18 @@ using namespace std;
 
 HashTable::HashTable(){
     int i;
-    WordPair * newWordPair = new WordPair("empty","empty");
-    Node<WordPair> * newNode = new Node<WordPair>(*newWordPair);
-    newNode->next = NULL;
-    
-    for(i =0; i<tableSize-1;i++){
-         HTable[i] = newNode;
+    WordPair * newWordPair;
+    for(i =0; i<tableSize;i++){
+        
+        newWordPair= new WordPair("empty","empty");
+         HTable[i] = new Node<WordPair>(*newWordPair);
+        HTable[i]->next =NULL;
     }
-
 }
+
+
+
+
 //TODO: deal with table collisions.currently using chaining
 // deal with collisions.
 void HashTable::Insert(WordPair EK){
@@ -33,13 +36,15 @@ void HashTable::Insert(WordPair EK){
     if(HTable[index]->data.english == "empty"){
         HTable[index]->data.english = EK.english;
         HTable[index]->data.klingon = EK.klingon;
-    }
-    else{
-        assert(HTable[index]->data.english != "empty"&&HTable[index]->data.klingon != "empty" );
+    }else{
+        
         HChain *currentChain =new HChain();
-        currentChain->insertNode(&(EK));
+        currentChain->insertNode(&(EK),HTable[index]);
     }
 }
+
+
+
 //if anything goes wrong its searh that is wrong.
 WordPair* HashTable::FindKlingon(string english){
     WordPair * englishSearch = new WordPair(english,"");
@@ -52,17 +57,11 @@ WordPair* HashTable::FindKlingon(string english){
 int HashTable::Hash(WordPair key){
     int hash =0;
     int index;
-    
-    index = key.english.length();
     // TODO: check if int i = 0 works on linux
     for(int i = 0; i<key.english.length();i++){
         hash = hash +(int)key.english[i];
     }
-    cout<< "hash = "<<hash<< endl;
-    
     index =hash% tableSize;
-    cout<< "index:"<<index<<endl;
-    
-    
+    cout<< "index"<<key.english<<":"<<index<<endl;
     return index;
 }

@@ -22,8 +22,8 @@ template <class T>
 class Node{
     private:
     
-    Node<T>* Head;
-    Node<WordPair> *currentchain;
+    
+     
     public:
     bool insertChain( WordPair * newWord){
         
