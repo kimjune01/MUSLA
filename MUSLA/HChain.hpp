@@ -20,8 +20,8 @@
 
 class HChain{
 private:
-    Node<WordPair>* head;
-    Node<WordPair> *next;
+    Node<WordPair>  *head;
+    Node<WordPair>  *next;
     
     
 public:

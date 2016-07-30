@@ -10,6 +10,7 @@
 #define Node_hpp
 #pragma once
 #include <stdio.h>
+#include "WordPair.h"
 
  /* Node_hpp */
 #include <string>
@@ -21,15 +22,19 @@ template <class T>
 class Node{
     private:
     
+    Node<T>* Head;
+    Node<WordPair> *currentchain;
     public:
+    bool insertChain( WordPair * newWord){
+        
+    }
        Node<T>*next;
-
+    
         Node(T insert) : data(insert),next(NULL){};
        // The data in the node
        // Pointer to next node
        // Constructors and destructor
         T  data;
-        
         bool nodeSetNext (Node<T>* theData);
     
     bool nodeGetNext(){
@@ -45,5 +50,7 @@ bool Node<T>::nodeSetNext(Node<T>* thedata){
     next = thedata;
     return true;
 }
+
+
  #endif
- 
+

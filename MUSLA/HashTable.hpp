@@ -33,8 +33,8 @@ public:
     int Hash(WordPair key);
     Node<WordPair>* HTable[tableSize];
     void Insert(WordPair EK);
-    HChain * currentChain;
     
+    WordPair* FindKlingon(string english);
     //TODO: implement
     
     //write the default constructor

@@ -36,8 +36,17 @@ void HashTable::Insert(WordPair EK){
     }
     else{
         assert(HTable[index]->data.english != "empty"&&HTable[index]->data.klingon != "empty" );
-        currentChain->insertNode(&EK);
+        HChain *currentChain =new HChain();
+        currentChain->insertNode(&(EK));
     }
+}
+//if anything goes wrong its searh that is wrong.
+WordPair* HashTable::FindKlingon(string english){
+    WordPair * englishSearch = new WordPair(english,"");
+    int index = Hash(*englishSearch);
+    bool found = false; 
+    WordPair *p ;
+    return p;
 }
 
 int HashTable::Hash(WordPair key){
@@ -48,8 +57,6 @@ int HashTable::Hash(WordPair key){
     // TODO: check if int i = 0 works on linux
     for(int i = 0; i<key.english.length();i++){
         hash = hash +(int)key.english[i];
-        
-        
     }
     cout<< "hash = "<<hash<< endl;
     
@@ -57,5 +64,5 @@ int HashTable::Hash(WordPair key){
     cout<< "index:"<<index<<endl;
     
     
-    return 0;
+    return index;
 }

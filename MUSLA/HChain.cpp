@@ -12,8 +12,8 @@ using namespace std;
 #include "WordPair.h"
 #include "Node.h"
 HChain::HChain(){
-    head = NULL;
-    next = NULL;
+     head = NULL;
+     next = NULL;
 }
 
 void HChain::SearchNode( WordPair* searchWord){
@@ -31,20 +31,23 @@ void HChain::SearchNode( WordPair* searchWord){
     
     
 }
-
+// TODO: get the Node as an agument pointer and then add things to that Node via using
+// HChain class.
 bool HChain::insertNode( WordPair * newWord){
-    
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
     if(head ==NULL){
+    Node<WordPair>* newNode = new Node<WordPair>(*newWord);
         head = newNode;
-    }else{
+        newNode->next =NULL;
+    }
+    if(head!=NULL){
         Node<WordPair> *Ptr = head;
         while(Ptr->next!=NULL){
             Ptr = Ptr->next;
         }
         Ptr->next = newNode;
     }
-    
+   
     return true;
     
 }
