@@ -28,9 +28,8 @@ void TestDriver::testHashTable(){
         assert(testHashTable.HTable[i]->data.klingon =="empty");
         assert(testHashTable.HTable[i]->next == NULL);
     }
-    // expected result is this to output nothing.
-    //TODO: make this efficient for large values of N . 
-    // hash function test. returns a number from a string
+     
+    // note WordPair is overloaded.
     WordPair  insert1 = WordPair("f","klinon1");
     WordPair  insert2 = WordPair("g","klinon1");
     WordPair  insert3 = WordPair("english1","klinon1");
@@ -45,15 +44,13 @@ void TestDriver::testHashTable(){
     testHashTable.Insert(insert4);
     testHashTable.Insert(insert5);
     testHashTable.Insert(insert6);
-    
+    //Note wordpair is overloaded.
     assert(*testHashTable.lookUpKlingon("english1") == insert3);
     assert(*testHashTable.lookUpKlingon("english2") == insert4);
-
     assert(*testHashTable.lookUpKlingon("english3") == insert5);
-
     assert(*testHashTable.lookUpKlingon("english4") == insert6);
     
-
+    
     
     //search
     

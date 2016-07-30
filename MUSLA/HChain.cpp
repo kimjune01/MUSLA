@@ -14,6 +14,8 @@ using namespace std;
 //Note only searches the for the value of a chained hash table index
 // not the entire hash table
 void HChain::SearchNode( string english,Node<WordPair>* currentHIndex){
+    
+    
     Node<WordPair> *current = currentHIndex;
     while(current!=NULL){
         if(current->data.english == english){

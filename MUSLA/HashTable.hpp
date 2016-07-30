@@ -33,7 +33,7 @@ public:
     int Hash(string english);
     Node<WordPair>* HTable[tableSize];
     void Insert(WordPair EK);
-    
+    void hPrintAll();
     WordPair* lookUpKlingon(string english);
     //TODO: implement
     

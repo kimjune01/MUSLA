@@ -21,6 +21,7 @@ HashTable::HashTable(){
         newWordPair= new WordPair("empty","empty");
          HTable[i] = new Node<WordPair>(*newWordPair);
         HTable[i]->next =NULL;
+        
     }
 }
 
@@ -70,3 +71,4 @@ int HashTable::Hash(string english){
     cout<< "index"<<english<<":"<<index<<endl;
     return index;
 }
+
