@@ -12,7 +12,6 @@
 #include <stdio.h>
 
 class TestDriver {
-    //
     
 public:
     void testAllTheThings();

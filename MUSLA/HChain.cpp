@@ -11,40 +11,36 @@ using namespace std;
 #include "HChain.hpp"
 #include "WordPair.h"
 #include "Node.h"
-
+//Note only searches the for the value of a chained hash table index
+// not the entire hash table
 void HChain::SearchNode( string english,Node<WordPair>* currentHIndex){
-    //TODO: make this work with hashtable look up.
-    
     Node<WordPair> *current = currentHIndex;
-    
     while(current!=NULL){
         if(current->data.english == english){
-            cout<<"found"<<"english:"<<current->data.english<<"klingon:"<<current->data.klingon;
+            cout<<"found"<<"english:"<<current->data.english<<"  "<<"klingon:"<<current->data.klingon;
             return;
         }
-        
         current = current->next;
     }
-    
-    
 }
-// TODO: get the Node as an agument pointer and then add things to that Node via using
-// HChain class.
+
+
+//Note only inserts links into a index of hashtable
+//not the entire hash table
 bool HChain::insertNode( WordPair * newWord,Node<WordPair>*currentHIndex){
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
     newNode->next = NULL;
-    
     Node<WordPair>* Ptr = currentHIndex;
     while(Ptr->next!=NULL){
             Ptr = Ptr->next;
         }
         Ptr->next = newNode;
-    
-    
     return true;
-    
 }
 
+
+//Note prints all the nodes of a chain of a table index
+// not the entire hashtable 
 void HChain::printAll(Node<WordPair> *currentHIndex){
     Node<WordPair> *current = currentHIndex;
     while(current!=NULL){

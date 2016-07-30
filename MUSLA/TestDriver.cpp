@@ -57,25 +57,40 @@ void TestDriver::testHashTable(){
 
  void TestDriver::testHashChain(){
      
+     WordPair* testword1 =new WordPair( "english1","klingon1");
+     WordPair* testword2 =new WordPair( "english2","klingon2");
+     WordPair* testword3 =new WordPair( "eng4","klingon3");
+     WordPair* testword4 =new WordPair( "english5","klingon4");
+     WordPair* testword5 =new WordPair( "english6","klingon5");
+     WordPair* testword6 =new WordPair( "eng7","klingon6");
+     WordPair* testword7 =new WordPair( "english8","klingon7");
+     WordPair* testword8 =new WordPair( "aaa","klingon8");
+     WordPair* testword9 =new WordPair( "ddd","klingon9");
      
-     WordPair* testword7 =new WordPair( "english6","klingon6");
-     WordPair* testword8 =new WordPair( "english8","klingon8");
-     WordPair* testword9 =new WordPair( "english9","klingon9");
+     
      Node<WordPair> * currentNode = new Node<WordPair>(*testword7);
      HChain * testChain = new HChain();
-     testChain->insertNode(testword7,currentNode);
+     //insert
+     testChain->insertNode(testword1,currentNode);
+     testChain->insertNode(testword2,currentNode);
+     testChain->insertNode(testword3,currentNode);
+     testChain->insertNode(testword4,currentNode);
+     testChain->insertNode(testword5,currentNode);
+     testChain->insertNode(testword8,currentNode);
      testChain->insertNode(testword9,currentNode);
-     testChain->printAll(currentNode);
-     WordPair* testSearchWord2 =new WordPair("english6","");
-     WordPair* testSearchWord3 =new WordPair( "english9","");
-     testChain->SearchNode("english6",currentNode);
-     testChain->SearchNode("english9",currentNode);
-     // test pass. 
+     //testChain->printAll(currentNode);
      
+     //search
+     
+     testChain->SearchNode("ddd",currentNode);
+     // this searchNode test pass.
+     
+      testChain->SearchNode("aaa",currentNode);
+      testChain->SearchNode("eng4",currentNode);
 }
  void TestDriver::testAllTheThings(){
-      //testHashChain();
-     testHashTable();
+      testHashChain();
+     //testHashTable();
      
     //TODO:
     //mock universities and students
