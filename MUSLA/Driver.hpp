@@ -10,7 +10,7 @@
 #define Driver_hpp
 #include "WordPair.h"
 #include <stdio.h>
-
+#include "BSTNode.h"
 class Driver{
 private:
     
@@ -22,7 +22,7 @@ private:
 public:
     void Populate();
     void lookUpKlingon();
-    void printAll();
+    void BSTPrintAll(BSTNode<WordPair>* root);
     
 };
 
