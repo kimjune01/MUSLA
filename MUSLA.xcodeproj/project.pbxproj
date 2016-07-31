@@ -57,7 +57,7 @@
 		BD232AB21D4131C00053F856 = {
 			isa = PBXGroup;
 			children = (
-				BD232ABD1D4131C00053F856 /* MUSLA */,
+				BD232ABD1D4131C00053F856 /* EKTAPPvr2 */,
 				BD232ABC1D4131C00053F856 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,15 +70,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD232ABD1D4131C00053F856 /* MUSLA */ = {
+		BD232ABD1D4131C00053F856 /* EKTAPPvr2 */ = {
 			isa = PBXGroup;
 			children = (
 				BD232ABE1D4131C10053F856 /* main.cpp */,
 				BD232ACB1D41379C0053F856 /* HashTable.cpp */,
 				BD232ACC1D41379C0053F856 /* HashTable.hpp */,
 				A7E9675A1D414F49008280FE /* TestDriver.cpp */,
-				A7E9675B1D414F49008280FE /* TestDriver.h */,
 				8D0E8C6C1D4BF70700B6B896 /* HChain.cpp */,
+				A7E9675B1D414F49008280FE /* TestDriver.h */,
 				8DE79DE21D4D7A3B00613CC6 /* Driver.cpp */,
 				8DE79DE31D4D7A3B00613CC6 /* Driver.hpp */,
 				8D0E8C6D1D4BF70700B6B896 /* HChain.hpp */,
@@ -87,6 +87,7 @@
 				8D707EA91D4AE6F90024F7EC /* WordPair.h */,
 				8D707EAA1D4AE7100024F7EC /* BST.h */,
 			);
+			name = EKTAPPvr2;
 			path = MUSLA;
 			sourceTree = "<group>";
 		};

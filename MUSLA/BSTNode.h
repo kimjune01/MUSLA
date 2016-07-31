@@ -1,5 +1,5 @@
 //
-//  Node.hpp
+//  BSTNode.hpp
 //  assignment3
 //
 //  Created by jimmy zhong on 2016-07-08.
@@ -18,27 +18,27 @@
 using namespace std;
 
 template <class T>
-class Node{
+class BSTNode{
     private:
-        Node<T>* left;
-        Node<T>*right;
+        BSTNode<T>* left;
+        BSTNode<T>*right;
         T  data;
     public:
-        Node(T insert) : data(insert),left(NULL),right(NULL){};
-       // The data in the node
-       // Pointer to next node
+        BSTNode(T insert) : data(insert),left(NULL),right(NULL){};
+       // The data in the BSTNode
+       // Pointer to next BSTNode
        // Constructors and destructor
     
-        bool nodeRight (Node<T>* theData);
+        bool nodeRight (BSTNode<T>* theData);
     
-        bool nodeLeft (Node<T> *theData);
+        bool nodeLeft (BSTNode<T> *theData);
         T getData(){
             return data;
         }
-        Node<T> *getLeft(){
+        BSTNode<T> *getLeft(){
             return left;
         }
-        Node<T> *getRight(){
+        BSTNode<T> *getRight(){
             return right;
         }
 };
@@ -47,13 +47,13 @@ class Node{
 
 template<class T>
 
-bool Node<T>::nodeLeft(Node<T>* thedata){
+bool BSTNode<T>::nodeLeft(BSTNode<T>* thedata){
     left = thedata;
     return true;
 }
 
 template<class T>
-bool Node<T>::nodeRight(Node<T>* thedata){
+bool BSTNode<T>::nodeRight(BSTNode<T>* thedata){
     right = thedata;
     return true;
 }

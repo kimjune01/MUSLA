@@ -11,7 +11,7 @@
 #define _BST_H_INCLUDED
 #include <string>
 #include <stdio.h>
-#include "Node.h"
+#include "BSTNode.h"
 
 
 
@@ -28,17 +28,17 @@ private:
    
    
     
-     Node<T>*root;
+     BSTNode<T>*root;
     
-     Node<T>* SearchPrivate(T data,Node<T>* ptr);
-     bool AddLeafPrivate(T data, Node<T>*tree);
+     BSTNode<T>* SearchPrivate(T data,BSTNode<T>* ptr);
+     bool AddLeafPrivate(T data, BSTNode<T>*tree);
     
 public:
     
     
-    Node<T> *getRoot();
+    BSTNode<T> *getRoot();
     void CreateLeaf(T data);
-    Node<T>* Search(T data);
+    BSTNode<T>* Search(T data);
     bool AddLeaf(T data);
     
      
@@ -47,7 +47,7 @@ public:
 
  /* BST_hpp */
 template<class T>
-Node<T> *BST<T>::getRoot(){
+BSTNode<T> *BST<T>::getRoot(){
     return root;
 }
 
@@ -56,7 +56,7 @@ template<class T>
 void  BST<T>::CreateLeaf(T data){
     
     //create a new function;
-    Node<T> *n = new Node<T>(data);
+    BSTNode<T> *n = new BSTNode<T>(data);
     // expectation use getter and setters for each function
     // expect that one class does not manipulate another instance
     // of class variables.
@@ -66,7 +66,7 @@ void  BST<T>::CreateLeaf(T data){
 
 template<class T>
 
-Node<T>*BST<T>::Search(T data){
+BSTNode<T>*BST<T>::Search(T data){
 
     return SearchPrivate(data, root);
 
@@ -74,7 +74,7 @@ Node<T>*BST<T>::Search(T data){
 
 //
 template<class T>
-Node<T>*BST<T>::SearchPrivate(T data, Node<T>* Ptr){
+BSTNode<T>*BST<T>::SearchPrivate(T data, BSTNode<T>* Ptr){
     // check if the data is empty
     if(Ptr !=NULL)
     {
@@ -113,9 +113,9 @@ bool BST<T>::AddLeaf(T data){
 
 template<class T>
 // finds the correct position to insert based on data
-bool BST<T>::AddLeafPrivate(T data, Node<T> *currenttree){
+bool BST<T>::AddLeafPrivate(T data, BSTNode<T> *currenttree){
     
-    Node<T> *newleaf = new Node<T>(data);
+    BSTNode<T> *newleaf = new BSTNode<T>(data);
     
     if (root == NULL){
     
@@ -123,7 +123,7 @@ bool BST<T>::AddLeafPrivate(T data, Node<T> *currenttree){
     
     }else if(newleaf->getData() < currenttree->getData()){
         
-        if(currenttree->getLeft()!=NULL){//recursivley goes left node.
+        if(currenttree->getLeft()!=NULL){//recursivley goes left BSTNode.
               AddLeafPrivate( data,currenttree->getLeft());
             
         }else{
@@ -136,11 +136,11 @@ bool BST<T>::AddLeafPrivate(T data, Node<T> *currenttree){
     else if(newleaf->getData()>currenttree->getData()){
         
         if(currenttree->getRight()!=NULL){
-            // recursively goes to the  right node
+            // recursively goes to the  right BSTNode
             AddLeafPrivate(data,currenttree->getRight() );
         
         }else{
-            // sets the node
+            // sets the BSTNode
             currenttree->nodeRight(newleaf);
         }
         
