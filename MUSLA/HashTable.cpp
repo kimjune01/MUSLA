@@ -31,7 +31,8 @@ HashTable::HashTable(){
 void HashTable::Insert(WordPair EK){
     string english = EK.english;
     int index = Hash(english);
-    //TODO the english and klingon public and private. 
+    
+    //TODO the english and klingon public and private.
     if(HTable[index]->data.english == "empty"){
         HTable[index]->data.english = EK.english;
         HTable[index]->data.klingon = EK.klingon;
@@ -47,6 +48,7 @@ WordPair* HashTable::lookUpKlingon(string english){
     int index = Hash(english);
     bool foundEnglish = false;
     string klingon;
+    
     Node<WordPair>* Ptr = HTable[index];
     while(Ptr !=NULL){
         if(Ptr->data.english ==english){

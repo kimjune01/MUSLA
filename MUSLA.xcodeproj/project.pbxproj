@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D0E8C6E1D4BF70700B6B896 /* HChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E8C6C1D4BF70700B6B896 /* HChain.cpp */; };
+		8DE79DE41D4D7A3B00613CC6 /* Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DE79DE21D4D7A3B00613CC6 /* Driver.cpp */; };
 		A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E9675A1D414F49008280FE /* TestDriver.cpp */; };
 		BD232ABF1D4131C10053F856 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ABE1D4131C10053F856 /* main.cpp */; };
 		BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD232ACB1D41379C0053F856 /* HashTable.cpp */; };
@@ -31,6 +32,9 @@
 		8D707EA81D4AE6F00024F7EC /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		8D707EA91D4AE6F90024F7EC /* WordPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordPair.h; sourceTree = "<group>"; };
 		8D707EAA1D4AE7100024F7EC /* BST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BST.h; sourceTree = "<group>"; };
+		8DE79DE21D4D7A3B00613CC6 /* Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Driver.cpp; sourceTree = "<group>"; };
+		8DE79DE31D4D7A3B00613CC6 /* Driver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Driver.hpp; sourceTree = "<group>"; };
+		8DE79DE61D4D7C1000613CC6 /* BSTNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSTNode.h; sourceTree = "<group>"; };
 		A7E9675A1D414F49008280FE /* TestDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestDriver.cpp; sourceTree = "<group>"; };
 		A7E9675B1D414F49008280FE /* TestDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDriver.h; sourceTree = "<group>"; };
 		BD232ABB1D4131C00053F856 /* MUSLA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MUSLA; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +79,10 @@
 				A7E9675A1D414F49008280FE /* TestDriver.cpp */,
 				A7E9675B1D414F49008280FE /* TestDriver.h */,
 				8D0E8C6C1D4BF70700B6B896 /* HChain.cpp */,
+				8DE79DE21D4D7A3B00613CC6 /* Driver.cpp */,
+				8DE79DE31D4D7A3B00613CC6 /* Driver.hpp */,
 				8D0E8C6D1D4BF70700B6B896 /* HChain.hpp */,
+				8DE79DE61D4D7C1000613CC6 /* BSTNode.h */,
 				8D707EA81D4AE6F00024F7EC /* Node.h */,
 				8D707EA91D4AE6F90024F7EC /* WordPair.h */,
 				8D707EAA1D4AE7100024F7EC /* BST.h */,
@@ -146,6 +153,7 @@
 				A7E9675C1D414F49008280FE /* TestDriver.cpp in Sources */,
 				8D0E8C6E1D4BF70700B6B896 /* HChain.cpp in Sources */,
 				BD232ACD1D41379C0053F856 /* HashTable.cpp in Sources */,
+				8DE79DE41D4D7A3B00613CC6 /* Driver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

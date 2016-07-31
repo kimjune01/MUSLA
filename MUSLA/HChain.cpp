@@ -30,6 +30,7 @@ void HChain::SearchNode( string english,Node<WordPair>* currentHIndex){
 //Note only inserts links into a index of hashtable
 //not the entire hash table
 bool HChain::insertNode( WordPair * newWord,Node<WordPair>*currentHIndex){
+    
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
     newNode->next = NULL;
     Node<WordPair>* Ptr = currentHIndex;

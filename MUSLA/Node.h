@@ -30,6 +30,7 @@ class Node{
     }
        Node<T>*next;
     
+    Node<T>*hashNext;
         Node(T insert) : data(insert),next(NULL){};
        // The data in the node
        // Pointer to next node
