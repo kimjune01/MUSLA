@@ -6,11 +6,12 @@
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
 #pragma once
-#ifndef Driver_hpp
-#define Driver_hpp
+#ifndef Driver_hpp_Included
+#define Driver_hpp_Included
 #include "WordPair.h"
 #include <stdio.h>
 #include "BSTNode.h"
+ 
 class Driver{
 private:
     

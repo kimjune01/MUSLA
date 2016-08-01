@@ -6,8 +6,8 @@
 //  Copyright (c) 2016 JuneKim_JimmyZhong. All rights reserved.
 //
 
-#ifndef __MUSLA__TestDriver__
-#define __MUSLA__TestDriver__
+#ifndef __MUSLA__TestDriver__Included
+#define __MUSLA__TestDriver__Included
 #pragma once
 #include <stdio.h>
 

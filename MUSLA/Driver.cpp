@@ -16,10 +16,8 @@
 #include <assert.h>
 
 #include "WordPair.h"
-
 #include "BST.h"
 #include "BSTNode.h"
-#include "Node.h"
 
 
 void Driver::Populate(int argc, char * argv[]){
