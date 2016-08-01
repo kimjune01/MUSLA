@@ -7,10 +7,14 @@
 //
 
 #include <iostream>
-
+#include "Driver.hpp"
 #include "TestDriver.h"
-int main(int argc, const char * argv[]) {
-    TestDriver *newTest = new  TestDriver ;
-    newTest->testAllTheThings();
+int main(int argc,  char * argv[]) {
+//    TestDriver *newTest = new  TestDriver ;
+//    newTest->testAllTheThings();
+
+    Driver * newDriver = new Driver;
+    
+    newDriver->Populate(argc,argv);
     return 0;
 }

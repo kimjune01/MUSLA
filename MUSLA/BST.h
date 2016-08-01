@@ -6,7 +6,7 @@
 //  Copyright © 2016 jimmy zhong. All rights reserved.
 //
 
-
+#pragma  once
 #ifndef _BST_H_INCLUDED
 #define _BST_H_INCLUDED
 #include <string>

@@ -6,7 +6,7 @@
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
 
-
+#pragma  once
 #ifndef HChain_hpp
 #define HChain_hpp
 

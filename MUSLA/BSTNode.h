@@ -5,10 +5,10 @@
 //  Created by jimmy zhong on 2016-07-08.
 //  Copyright © 2016 jimmy zhong. All rights reserved.
 //
-
+#pragma once
 #ifndef Node_hpp
 #define Node_hpp
-#pragma once
+
 #include <stdio.h>
 
  /* Node_hpp */

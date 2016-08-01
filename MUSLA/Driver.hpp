@@ -5,7 +5,7 @@
 //  Created by jimmy zhong on 2016-07-30.
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
-
+#pragma once
 #ifndef Driver_hpp
 #define Driver_hpp
 #include "WordPair.h"
@@ -20,7 +20,7 @@ private:
     
     
 public:
-    void Populate();
+    void Populate(int argc, char * argv[]);
     void lookUpKlingon();
     void BSTPrintAll(BSTNode<WordPair>* root);
     

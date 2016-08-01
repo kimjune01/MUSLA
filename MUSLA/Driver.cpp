@@ -6,6 +6,7 @@
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
 
+
 #include "Driver.hpp"
 #include <iostream>
 #include <sstream>
@@ -13,13 +14,16 @@
 #include <cstring>
 #include <string>
 #include <assert.h>
+
 #include "WordPair.h"
 
 #include "BST.h"
 #include "BSTNode.h"
+#include "Node.h"
 
-BST<WordPair>*WordPairtree = new BST<WordPair>;
-void Driver::Populate(){
+
+void Driver::Populate(int argc, char * argv[]){
+    BST<WordPair>*WordPairtree = new BST<WordPair>;
     
     string aLine;
     ifstream myfile ;
@@ -72,10 +76,21 @@ void Driver::Populate(){
         // Htable insert. here.
         WordPairtree->AddLeaf(*inputword);
         
+        
+        
+        if(argc>1){
+            string arg1 = argv[1];
+            if((arg1 =="display")){
+                BSTNode<WordPair> * nodeTree = WordPairtree->getRoot();
+                //assert(nodeTree->getData().english == "stop");
+                BSTPrintAll(nodeTree);
+                
+            }
+
     }
 
 }
-
+}
 
 
 void Driver::BSTPrintAll(BSTNode<WordPair>* root){

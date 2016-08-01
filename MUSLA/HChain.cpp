@@ -13,7 +13,7 @@ using namespace std;
 #include "Node.h"
 //Note only searches the for the value of a chained hash table index
 // not the entire hash table
-void HChain::SearchNode( string english,Node<WordPair>* currentHIndex){
+void HChain::SearchNode(string english,Node<WordPair>* currentHIndex){
     
     
     Node<WordPair> *current = currentHIndex;
