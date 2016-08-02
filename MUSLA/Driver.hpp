@@ -8,14 +8,23 @@
 #pragma once
 #ifndef Driver_hpp_Included
 #define Driver_hpp_Included
-#include "WordPair.h"
+
 #include <stdio.h>
-#include "BSTNode.h"
- 
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <cstring>
+#include <string>
+#include <assert.h>
+#include "HashTable.hpp"
+#include "WordPair.h"
+#include "BST.h"
+
+
 class Driver{
 private:
     
-    static const int tableSize = 10;
+    static const int tableSize = 100;
     
     WordPair *Tableitems[tableSize];
     

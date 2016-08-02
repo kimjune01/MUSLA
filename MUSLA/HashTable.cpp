@@ -5,6 +5,7 @@
 //  Created by June Kim on 2016-07-21.
 //  Copyright © 2016 JuneKim_JimmyZhong. All rights reserved.
 //
+#include <math.h>
 #include "Node.h"
 #include "HashTable.hpp"
 #include "WordPair.h"
@@ -67,7 +68,7 @@ int HashTable::Hash(string english){
     int index;
     // TODO: check if int i = 0 works on linux
     for(int i = 0; i<english.length();i++){
-        hash = hash +(int)english[i];
+        hash = hash + (int)english[i]*(i);
         }
     index =hash% tableSize;
     cout<< "index"<<english<<":"<<index<<endl;

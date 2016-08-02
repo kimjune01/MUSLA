@@ -9,9 +9,6 @@
 #ifndef Node_hpp
 #define Node_hpp
 
-#include <stdio.h>
-
- /* Node_hpp */
 #include <string>
 #include <stdio.h>
  

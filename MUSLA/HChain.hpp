@@ -11,9 +11,7 @@
 #define HChain_hpp
 
 #include <stdio.h>
-
-
-
+#include <iostream>
 #include "Node.h"
 #include "WordPair.h"
 
@@ -22,7 +20,6 @@ class HChain{
 private:
     
 public:
-    
     
     void SearchNode(string english,Node<WordPair>*currentHIndex);
     bool insertNode( WordPair * newWord,Node<WordPair>*currentHIndex);

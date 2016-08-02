@@ -22,7 +22,7 @@ using namespace std;
 class HashTable {
     
 private:
-    static const int tableSize = 10;
+    static const int tableSize = 100;
     
  
    

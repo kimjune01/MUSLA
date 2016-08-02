@@ -13,21 +13,60 @@
 #include <stdio.h>
 #include "BSTNode.h"
 
-
-
-
-
 using namespace std;
+
+
+template <class T>
+class BSTNode{
+private:
+    BSTNode<T>* left;
+    BSTNode<T>*right;
+    T  data;
+public:
+    BSTNode(T insert) : data(insert),left(NULL),right(NULL){};
+    // The data in the BSTNode
+    // Pointer to next BSTNode
+    // Constructors and destructor
+    
+    bool nodeRight (BSTNode<T>* theData);
+    
+    bool nodeLeft (BSTNode<T> *theData);
+    T getData(){
+        return data;
+    }
+    BSTNode<T> *getLeft(){
+        return left;
+    }
+    BSTNode<T> *getRight(){
+        return right;
+    }
+};
+
 
 
 template<class T>
 
+bool BSTNode<T>::nodeLeft(BSTNode<T>* thedata){
+    left = thedata;
+    return true;
+}
+
+template<class T>
+bool BSTNode<T>::nodeRight(BSTNode<T>* thedata){
+    right = thedata;
+    return true;
+}
+
+
+
+
+
+
+template<class T>
 class BST{
     
 private:
    
-   
-    
      BSTNode<T>*root;
     
      BSTNode<T>* SearchPrivate(T data,BSTNode<T>* ptr);
@@ -52,7 +91,6 @@ BSTNode<T> *BST<T>::getRoot(){
 }
 
 template<class T>
-
 void  BST<T>::CreateLeaf(T data){
     
     //create a new function;
@@ -153,6 +191,8 @@ bool BST<T>::AddLeafPrivate(T data, BSTNode<T> *currenttree){
     
     return true;
 }
+
+
 #endif
 
 

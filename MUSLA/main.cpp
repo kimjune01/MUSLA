@@ -9,12 +9,19 @@
 #include <iostream>
 #include "Driver.hpp"
 #include "TestDriver.h"
-int main(int argc,  char * argv[]) {
-//    TestDriver *newTest = new  TestDriver ;
-//    newTest->testAllTheThings();
+//#include "HChain.hpp"
+//#include "HashTable.hpp"
 
-    Driver * newDriver = new Driver;
-    
+// including Hchain with Driver gives error
+// including HashTable and Driver gives errors.
+
+int main(int argc,  char * argv[]) {
+    //TestDriver *newTest = new  TestDriver ;
+    //newTest->testAllTheThings();
+
+   Driver * newDriver = new Driver;
+//    
     newDriver->Populate(argc,argv);
+    
     return 0;
 }

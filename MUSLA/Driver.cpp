@@ -7,21 +7,13 @@
 //
 
 
+#include "HashTable.hpp"
 #include "Driver.hpp"
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <cstring>
-#include <string>
-#include <assert.h>
-
-#include "WordPair.h"
-#include "BST.h"
-#include "BSTNode.h"
 
 
 void Driver::Populate(int argc, char * argv[]){
     BST<WordPair>*WordPairtree = new BST<WordPair>;
+    HashTable * newHTable = new HashTable;
     
     string aLine;
     ifstream myfile ;
@@ -73,7 +65,7 @@ void Driver::Populate(int argc, char * argv[]){
         WordPair  * inputword = new WordPair(englishWord,klingonWord);
         // Htable insert. here.
         WordPairtree->AddLeaf(*inputword);
-        
+        newHTable->Insert(*inputword);
         
         
         if(argc>1){
@@ -89,6 +81,8 @@ void Driver::Populate(int argc, char * argv[]){
 
 }
 }
+
+
 
 
 void Driver::BSTPrintAll(BSTNode<WordPair>* root){
