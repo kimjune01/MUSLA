@@ -22,6 +22,6 @@ int main(int argc,  char * argv[]) {
    Driver * newDriver = new Driver;
 //    
     newDriver->Populate(argc,argv);
-    
+    newDriver->Search();
     return 0;
 }

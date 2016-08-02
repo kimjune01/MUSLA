@@ -45,17 +45,20 @@ void HashTable::Insert(WordPair EK){
 
 
 
-WordPair* HashTable::lookUpKlingon(string english){
+WordPair* HashTable::lookUpKlingon(WordPair *searchWord){
+    string english = searchWord->english;
     int index = Hash(english);
     bool foundEnglish = false;
     string klingon;
     
     Node<WordPair>* Ptr = HTable[index];
+    
+    
     while(Ptr !=NULL){
         if(Ptr->data.english ==english){
             foundEnglish = true;
             klingon = Ptr->data.klingon;
-            cout<<"english:"<<Ptr->data.english<<" "<<"klingon:"<<Ptr->data.klingon<<endl;
+            
             return &Ptr->data;
         }Ptr = Ptr->next;
     }

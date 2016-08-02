@@ -10,10 +10,13 @@
 #include "HashTable.hpp"
 #include "Driver.hpp"
 
+HashTable * newHTable = new HashTable;
+
+
 
 void Driver::Populate(int argc, char * argv[]){
     BST<WordPair>*WordPairtree = new BST<WordPair>;
-    HashTable * newHTable = new HashTable;
+    
     
     string aLine;
     ifstream myfile ;
@@ -63,11 +66,16 @@ void Driver::Populate(int argc, char * argv[]){
         }
         
         WordPair  * inputword = new WordPair(englishWord,klingonWord);
+        
+        
+        
         // Htable insert. here.
         WordPairtree->AddLeaf(*inputword);
         newHTable->Insert(*inputword);
         
-        
+        // inserting the elements works.
+        // TODO: make the hash function better
+        // maybe increase the table size.
         if(argc>1){
             string arg1 = argv[1];
             if((arg1 =="display")){
@@ -80,10 +88,39 @@ void Driver::Populate(int argc, char * argv[]){
     }
 
 }
+    
+    
 }
 
+void Driver::Search(){
+    
+    string Line;
+    string userinput[100];
+    // gets line from input.
+    int i = 0;
+    // starting the get the user input.
+    while(getline(cin, Line)) {   // while (there is data)
+        stringstream ss(Line);
+        ss >> userinput[i];
+        i++;
+    }
+    cout<<endl;
+    // out puts the translated words
+    int j=0;
+    for(j=0;j<i;j++){
+        
+        WordPair * inputword = new WordPair(userinput[j],"");
+        //
+         WordPair  * newtranslation = newHTable->lookUpKlingon(inputword);
+        
+        if(newtranslation!=NULL){
+            // outputs  englishword:klingonword
+            cout<<newtranslation->english<<":"<<newtranslation->klingon<<endl;
+        }
+    }
 
 
+}
 
 void Driver::BSTPrintAll(BSTNode<WordPair>* root){
         if(root!=NULL){

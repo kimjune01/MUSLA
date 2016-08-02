@@ -11,23 +11,24 @@ using namespace std;
 
 //Note only searches the for the value of a chained hash table index
 // not the entire hash table
-void HChain::SearchNode(string english,Node<WordPair>* currentHIndex){
+WordPair* HChain::SearchNode(string english,Node<WordPair>* currentHIndex){
     
     
     Node<WordPair> *current = currentHIndex;
     while(current!=NULL){
         if(current->data.english == english){
             cout<<"found"<<"english:"<<current->data.english<<"  "<<"klingon:"<<current->data.klingon;
-            return;
+            return &current->data;
         }
         current = current->next;
     }
+    return NULL;
 }
 
 
 //Note only inserts links into a index of hashtable
 //not the entire hash table
-bool HChain::insertNode( WordPair * newWord,Node<WordPair>*currentHIndex){
+bool HChain::insertNode(WordPair * newWord,Node<WordPair>*currentHIndex){
     
     Node<WordPair>* newNode = new Node<WordPair>(*newWord);
     newNode->next = NULL;

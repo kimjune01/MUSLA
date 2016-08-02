@@ -31,7 +31,7 @@ private:
     
 public:
     void Populate(int argc, char * argv[]);
-    void lookUpKlingon();
+    void Search();
     void BSTPrintAll(BSTNode<WordPair>* root);
     
 };

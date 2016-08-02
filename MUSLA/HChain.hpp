@@ -21,7 +21,7 @@ private:
     
 public:
     
-    void SearchNode(string english,Node<WordPair>*currentHIndex);
+    WordPair* SearchNode(string english,Node<WordPair>*currentHIndex);
     bool insertNode( WordPair * newWord,Node<WordPair>*currentHIndex);
     void printAll(Node<WordPair>*currentHIndex);
 };
