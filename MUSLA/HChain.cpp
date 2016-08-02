@@ -17,12 +17,13 @@ WordPair* HChain::SearchNode(string english,Node<WordPair>* currentHIndex){
     Node<WordPair> *current = currentHIndex;
     while(current!=NULL){
         if(current->data.english == english){
-            cout<<"found"<<"english:"<<current->data.english<<"  "<<"klingon:"<<current->data.klingon;
             return &current->data;
         }
         current = current->next;
     }
-    return NULL;
+    
+    WordPair *notWord = new WordPair("","");
+    return    notWord;
 }
 
 

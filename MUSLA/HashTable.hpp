@@ -34,7 +34,7 @@ public:
     Node<WordPair>* HTable[tableSize];
     void Insert(WordPair EK);
     void hPrintAll();
-    WordPair* lookUpKlingon(WordPair*searchWord);
+    WordPair lookUpKlingon(WordPair*searchWord);
     //TODO: implement
     
     //write the default constructor
