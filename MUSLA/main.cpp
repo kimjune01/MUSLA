@@ -17,7 +17,7 @@
 
 int main(int argc,  char * argv[]) {
     //TestDriver *newTest = new  TestDriver ;
-    //newTest->testAllTheThings();
+    //newTest->testShuffleThings();
 
    Driver * newDriver = new Driver;
 //    

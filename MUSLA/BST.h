@@ -70,7 +70,7 @@ private:
      BSTNode<T>*root;
     
      BSTNode<T>* SearchPrivate(T data,BSTNode<T>* ptr);
-     bool AddLeafPrivate(T data, BSTNode<T>*tree);
+     bool AddLeafPrivate(T *data, BSTNode<T>*tree);
     
 public:
     
@@ -78,7 +78,7 @@ public:
     BSTNode<T> *getRoot();
     void CreateLeaf(T data);
     BSTNode<T>* Search(T data);
-    bool AddLeaf(T data);
+    bool AddLeaf(T *data);
     
      
     
@@ -142,7 +142,7 @@ BSTNode<T>*BST<T>::SearchPrivate(T data, BSTNode<T>* Ptr){
 }
 
 template<class T>
-bool BST<T>::AddLeaf(T data){
+bool BST<T>::AddLeaf(T * data){
     
 
     AddLeafPrivate(data, root);
@@ -151,9 +151,9 @@ bool BST<T>::AddLeaf(T data){
 
 template<class T>
 // finds the correct position to insert based on data
-bool BST<T>::AddLeafPrivate(T data, BSTNode<T> *currenttree){
+bool BST<T>::AddLeafPrivate(T *data, BSTNode<T> *currenttree){
     
-    BSTNode<T> *newleaf = new BSTNode<T>(data);
+    BSTNode<T> *newleaf = new BSTNode<T>(*data);
     
     if (root == NULL){
     

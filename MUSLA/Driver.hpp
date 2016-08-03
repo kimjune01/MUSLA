@@ -33,7 +33,8 @@ public:
     void Populate(int argc, char * argv[]);
     void Search();
     void BSTPrintAll(BSTNode<WordPair>* root);
-    
+    void ShuffleThings(WordPair*someArray[],int arraySize);
+    void shuffleArray(WordPair*someArray[],int arraySize);
 };
 
 #endif /* Driver_hpp */

@@ -29,17 +29,17 @@ HashTable::HashTable(){
 
 //TODO: deal with table collisions.currently using chaining
 // deal with collisions.
-void HashTable::Insert(WordPair EK){
-    string english = EK.english;
+void HashTable::Insert(WordPair *EK){
+    string english = EK->english;
     int index = Hash(english);
     
     //TODO the english and klingon public and private.
     if(HTable[index]->data.english == "  "){
-        HTable[index]->data.english = EK.english;
-        HTable[index]->data.klingon = EK.klingon;
+        HTable[index]->data.english = EK->english;
+        HTable[index]->data.klingon = EK->klingon;
     }else{
         HChain *currentChain =new HChain();
-        currentChain->insertNode(&(EK),HTable[index]);
+        currentChain->insertNode((EK),HTable[index]);
     }
 }
 

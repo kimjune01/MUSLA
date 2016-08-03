@@ -35,14 +35,14 @@ void TestDriver::testHashTable(){
     WordPair  insert4 = WordPair("english2","klinon2");
     WordPair  insert5 = WordPair("english3","klinon4");
     WordPair  insert6 = WordPair("english4","klinon5");
-    testHashTable.Insert(insert1);
-    testHashTable.Insert(insert1);
-    testHashTable.Insert(insert1);
-    testHashTable.Insert(insert2);
-    testHashTable.Insert(insert3);
-    testHashTable.Insert(insert4);
-    testHashTable.Insert(insert5);
-    testHashTable.Insert(insert6);
+    testHashTable.Insert(&insert1);
+    testHashTable.Insert(&insert1);
+    testHashTable.Insert(&insert1);
+    testHashTable.Insert(&insert2);
+    testHashTable.Insert(&insert3);
+    testHashTable.Insert(&insert4);
+    testHashTable.Insert(&insert5);
+    testHashTable.Insert(&insert6);
     //Note wordpair is overloaded.
 //    assert(testHashTable.lookUpKlingon(*insert3) == insert3);
 //    assert(*testHashTable.lookUpKlingon(&insert4) == insert4);
@@ -99,4 +99,66 @@ void TestDriver::testHashTable(){
     //TODO:
     //mock universities and students
 }
-
+//void printArray(int inArray[], int size) {
+//    cout << "printing array of size: " << size << endl;
+//    for (int i = 0; i < size; i++) {
+//        cout << "at index " << i << " element: " << inArray[i] << endl;
+//    }
+//    cout << endl;
+//}
+//
+//int random(int min, int max) {
+//    static bool first = true;
+//    if ( first )
+//    {
+//        srand(time(NULL)); //seeding for the first time only!
+//        first = false;
+//    }
+//    return min + rand() % (max - min);
+//}
+//
+//void shuffleArray(int arbitraryArray[], int size) {
+//    //TODO:
+//    int randInt;
+//    int otherRandInt;
+//
+//    for (int i = 0; i < size * 2; i++) {
+//        randInt = random(0, size);
+//        cout << "randInt: " << randInt << endl;
+//        otherRandInt = random(0, size);
+//        if (randInt != otherRandInt) {
+//            int temp = arbitraryArray[randInt];
+//            arbitraryArray[randInt] = arbitraryArray[otherRandInt];
+//            arbitraryArray[otherRandInt] = temp;
+//        }
+//    }
+//    
+//    
+//    
+//    
+//    
+//    
+//    
+//    //random index
+//    
+//    //go into arbitrary array[random index];
+//    //insert this into another array
+//    // remove item form old array.
+//    //
+//    
+//    
+//    
+//}
+//
+//void TestDriver::testShuffleThings(){
+//    //make a new array
+//    int arraySize = 10;
+//    int someArray[arraySize];
+//    for (int i = 0; i < arraySize; i++) {
+//        someArray[i] = i;
+//    }
+//    printArray(someArray, arraySize);
+//    shuffleArray(someArray, arraySize);
+//    printArray(someArray, arraySize);
+//
+//}

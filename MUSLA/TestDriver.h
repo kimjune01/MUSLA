@@ -17,6 +17,7 @@ public:
     void testAllTheThings();
     void testHashTable();
     void testHashChain();
+    void testShuffleThings();
     
    
 };

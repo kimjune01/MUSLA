@@ -9,15 +9,15 @@
 
 #include "HashTable.hpp"
 #include "Driver.hpp"
+#include <vector>
 
 HashTable * newHTable = new HashTable;
 
 
 
 void Driver::Populate(int argc, char * argv[]){
+    vector<WordPair>* wordList = new vector<WordPair>;
     BST<WordPair>*WordPairtree = new BST<WordPair>;
-    
-    
     string aLine;
     ifstream myfile ;
     myfile.open("data.txt");
@@ -27,7 +27,7 @@ void Driver::Populate(int argc, char * argv[]){
         cout << "file is not open"<<endl;
     }
     // get the next line of input
-    
+    int i = 0;
     while ( getline(myfile, aLine) ) {
         //
         char eachLine[100];
@@ -57,45 +57,41 @@ void Driver::Populate(int argc, char * argv[]){
                 englishWord += tolower(englishLetter);
                 // adds each letter to english word
             } else {
-                
                 char klingonLetter;
                 ss << eachLine[c];
                 ss  >> klingonLetter;
                 klingonWord += tolower(klingonLetter);
             }// add each letter to klingon word
         }
-        
         WordPair  * inputword = new WordPair(englishWord,klingonWord);
-        
-        
-        
         // Htable insert. here.
-        WordPairtree->AddLeaf(*inputword);
-        newHTable->Insert(*inputword);
-         
-
-        // inserting the elements works.
-        // TODO: make the hash function better
-        // maybe increase the table size.
-        if(argc>1){
-            string arg1 = argv[1];
-            if((arg1 =="display")){
-                BSTNode<WordPair> * nodeTree = WordPairtree->getRoot();
-                //assert(nodeTree->getData().english == "stop");
-                BSTPrintAll(nodeTree);
-                
-            }
-
+        Tableitems[i] = inputword;
+        i++;
+        
+    }
+    ShuffleThings(Tableitems,i);
+    
+    for(int j = 0; j<i;j++){
+       WordPairtree->AddLeaf(Tableitems[j]);
+       newHTable->Insert(Tableitems[j]);
+}
+    if(argc>1){
+        string arg1 = argv[1];
+        if((arg1 =="display")){
+            BSTNode<WordPair> * nodeTree = WordPairtree->getRoot();
+            //assert(nodeTree->getData().english == "stop");
+            BSTPrintAll(nodeTree);
+            return;
+        }
+        
     }
 
 }
-    
-    
-}
+
 
 void Driver::Search(){
     //cout<< "Enter english words to translate"<<endl;
-
+    
     string Line;
     string userinput[100];
     // gets line from input.
@@ -114,20 +110,20 @@ void Driver::Search(){
         
         WordPair * inputword = new WordPair(userinput[j],"");
         //
-         WordPair newtranslation = newHTable->lookUpKlingon(inputword);
+        WordPair newtranslation = newHTable->lookUpKlingon(inputword);
         
-            if(newtranslation.english==inputword->english){                 // outputs  englishword:klingonword
-                cout<<newtranslation.english<<":"<<newtranslation.klingon<<endl;
-        
-        
-        }
+        if(newtranslation.english==inputword->english){                 // outputs  englishword:klingonword
+            cout<<newtranslation.english<<":"<<newtranslation.klingon<<endl;
             
-
-
-}
+            
+        }
+        
+        
+        
+    }
 }
 void Driver::BSTPrintAll(BSTNode<WordPair>* root){
-        if(root!=NULL){
+    if(root!=NULL){
         
         if(root->getLeft()!=NULL){
             BSTPrintAll(root->getLeft());
@@ -139,7 +135,61 @@ void Driver::BSTPrintAll(BSTNode<WordPair>* root){
             
         }
     }
-
+    
     
     // for loop to print out all the items in the array.
 }
+
+void printArray(int inArray[], int size);
+void printArray(WordPair* inArray[], int size) {
+    cout << "printing array of size: " << size << endl;
+    for (int i = 0; i < size; i++) {
+        cout << "at index" << i << " english " << inArray[i]->english<<" klingon "<< inArray[i]->klingon << endl;
+    }
+    cout << endl;
+}
+int random(int min, int max);
+int random(int min, int max) {
+    static bool first = true;
+    if ( first )
+    {
+        srand(time(NULL)); //seeding for the first time only!
+        first = false;
+    }
+    return min + rand() % (max - min);
+}
+//void shuffleArray(WordPair *arbitraryArray[], int size);
+void Driver::shuffleArray(WordPair* arbitraryArray[], int size) {
+    //TODO:
+    int randInt;
+    int otherRandInt;
+    
+    for (int i = 0; i < size * 2; i++) {
+        randInt = random(0, size);
+        cout << "randInt: " << randInt << endl;
+        otherRandInt = random(0, size);
+        if (randInt != otherRandInt) {
+            WordPair* temp = arbitraryArray[randInt];
+            arbitraryArray[randInt] = arbitraryArray[otherRandInt];
+            arbitraryArray[otherRandInt] = temp;
+        }
+    }
+}
+
+void Driver::ShuffleThings(WordPair*someArray[],int arraySize){
+    //make a new array
+//    int arraySize = 10;
+//    int someArray[arraySize];
+//    for (int i = 0; i < arraySize; i++) {
+//        someArray[i] = i;
+//    }
+    
+    printArray(someArray, arraySize);
+    shuffleArray(someArray, arraySize);
+    printArray(someArray, arraySize);
+    
+}
+
+
+    
+
