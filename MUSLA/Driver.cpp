@@ -72,9 +72,7 @@ void Driver::Populate(int argc, char * argv[]){
         // Htable insert. here.
         WordPairtree->AddLeaf(*inputword);
         newHTable->Insert(*inputword);
-        BSTNode<WordPair> * nodeTree = WordPairtree->getRoot();
-        //assert(nodeTree->getData().english == "stop");
-        BSTPrintAll(nodeTree);
+         
 
         // inserting the elements works.
         // TODO: make the hash function better
@@ -117,7 +115,6 @@ void Driver::Search(){
         WordPair * inputword = new WordPair(userinput[j],"");
         //
          WordPair newtranslation = newHTable->lookUpKlingon(inputword);
-        
         
             if(newtranslation.english==inputword->english){                 // outputs  englishword:klingonword
                 cout<<newtranslation.english<<":"<<newtranslation.klingon<<endl;
